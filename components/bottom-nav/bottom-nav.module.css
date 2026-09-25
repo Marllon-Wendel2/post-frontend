@@ -1,0 +1,88 @@
+/* ============================================================ */
+/* bottom-nav.css — Menu Inferior (Mobile) / Sidebar (Desktop)   */
+/* ============================================================ */
+
+/* Mobile: barra inferior fixa */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+  background: #ffffff;
+  border-top: 1px solid #e5e7eb;
+  padding-bottom: env(safe-area-inset-bottom);
+  z-index: 100;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #9ca3af;
+  gap: 2px;
+  flex: 1;
+  padding: 8px 0;
+  transition: color 0.2s ease;
+}
+
+.nav-item:hover {
+  color: #374151;
+}
+
+.nav-item.active {
+  color: #16a34a;
+}
+
+.bottom-nav svg {
+  font-size: 24px;
+}
+
+.bottom-nav ion-label {
+  font-size: 10px;
+  margin: 0;
+}
+
+/* ============================================================ */
+/* Desktop: sidebar lateral fixa à esquerda                      */
+/* ============================================================ */
+
+@media (min-width: 768px) {
+  .bottom-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: auto;
+    width: 72px;
+    height: 100dvh;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    padding: 20px 0;
+    border-top: none;
+    border-right: 1px solid #e5e7eb;
+    padding-bottom: 0;
+  }
+
+  .nav-item {
+    flex: none;
+    width: 100%;
+    padding: 12px 0;
+    gap: 4px;
+  }
+
+  .bottom-nav svg {
+    font-size: 26px;
+  }
+
+  .bottom-nav ion-label {
+    font-size: 9px;
+  }
+}

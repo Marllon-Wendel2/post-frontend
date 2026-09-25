@@ -1,0 +1,106 @@
+/* ============================================================ */
+/* globals.css — Estilos Globais do App                          */
+/* ============================================================ */
+
+/* ============================================================ */
+/* IMPORT DO TAILWIND CSS v4                                     */
+/* ============================================================ */
+@import 'tailwindcss';
+
+/* ============================================================ */
+/* IMPORT DO IONIC CSS                                           */
+/* ============================================================ */
+@import '@ionic/react/css/core.css';
+@import '@ionic/react/css/normalize.css';
+@import '@ionic/react/css/structure.css';
+@import '@ionic/react/css/typography.css';
+@import '@ionic/react/css/display.css';
+
+/* ============================================================ */
+/* RESET E ESTILOS BASE                                          */
+/* ============================================================ */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@layer theme {
+  :root {
+    --font-sans: var(--font-audiowide), cursive;
+    --default-font-family: var(--font-audiowide), cursive;
+  }
+}
+
+html {
+  font-family: var(--font-audiowide), cursive !important;
+  --ion-font-family: var(--font-audiowide), cursive;
+  height: 100dvh;
+  background-color: #ffffff;
+}
+
+body {
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Remove sublinhado padrão de links */
+a {
+  text-decoration: none;
+}
+
+/* Remove borda padrão de imagens */
+img {
+  border: 0;
+  max-width: 100%;
+}
+
+/* ============================================================ */
+/* BOTÕES REUTILIZÁVEIS                                          */
+/* ============================================================ */
+
+.btn-primary {
+  --border-radius: 14px;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: none;
+  min-height: 52px;
+}
+
+.btn-icon {
+  font-size: 20px;
+}
+
+@media (min-width: 768px) {
+  .btn-primary {
+    --border-radius: 12px;
+    min-height: 48px;
+    max-width: 400px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+/* ============================================================ */
+/* Push content right on desktop when sidebar is visible         */
+/* ============================================================ */
+/* Os wrappers de página precisam de altura definida para que     */
+/* ion-content (height: 100%) encontre um tamanho resolvível.     */
+.page-home,
+.page-post,
+.page-profile {
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  .page-home ion-content,
+  .page-post ion-content,
+  .page-profile ion-content {
+    --padding-start: 72px;
+  }
+}

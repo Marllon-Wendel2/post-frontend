@@ -1,0 +1,199 @@
+/* ============================================================ */
+/* post.css — Estilos da Página de Postar                        */
+/* ============================================================ */
+
+.post-form {
+  padding: 16px;
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Input de arquivo escondido */
+.file-input-hidden {
+  display: none;
+}
+
+/* ============================================================ */
+/* Área de Upload                                                */
+/* ============================================================ */
+
+.upload-area {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #f3f4f6;
+  border: 2px dashed #d1d5db;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.upload-area:hover {
+  border-color: #16a34a;
+  background: #f0fdf4;
+}
+
+.upload-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: #9ca3af;
+}
+
+.upload-icon {
+  font-size: 48px;
+}
+
+.upload-placeholder ion-label {
+  font-size: 14px;
+}
+
+.upload-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ============================================================ */
+/* Campos do Formulário                                          */
+/* ============================================================ */
+
+.form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.form-input {
+  --background: #f9fafb;
+  --border-radius: 12px;
+  --padding-start: 14px;
+  --padding-end: 14px;
+  --padding-top: 12px;
+  --padding-bottom: 12px;
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  font-size: 15px;
+  min-height: 48px;
+}
+
+.form-input::part(native) {
+  font-family: inherit;
+}
+
+/* ============================================================ */
+/* Badge da Vendedora                                             */
+/* ============================================================ */
+
+.seller-badge {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+/* ============================================================ */
+/* Botão de Submissão                                            */
+/* ============================================================ */
+
+.submit-area {
+  padding-top: 8px;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+/* ============================================================ */
+/* Tablet (768px+) — Layout side-by-side                          */
+/* ============================================================ */
+
+@media (min-width: 768px) {
+  .post-form {
+    padding: 24px;
+    padding-bottom: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 24px;
+    align-items: start;
+  }
+
+  .upload-area {
+    aspect-ratio: 1 / 1;
+    border-radius: 14px;
+  }
+
+  .upload-icon {
+    font-size: 56px;
+  }
+
+  .form-fields {
+    gap: 18px;
+  }
+
+  .field-label {
+    font-size: 14px;
+  }
+
+  .form-input {
+    --padding-start: 16px;
+    --padding-end: 16px;
+    --padding-top: 14px;
+    --padding-bottom: 14px;
+    font-size: 16px;
+    min-height: 52px;
+  }
+
+  .seller-badge {
+    font-size: 16px;
+    padding: 14px 16px;
+  }
+
+  .submit-area {
+    grid-column: 1 / -1;
+    padding-top: 8px;
+  }
+}
+
+/* ============================================================ */
+/* Desktop (1024px+) — Formulário mais largo                      */
+/* ============================================================ */
+
+@media (min-width: 1024px) {
+  .post-form {
+    max-width: 960px;
+    gap: 32px;
+  }
+
+  .upload-area {
+    border-radius: 16px;
+  }
+}

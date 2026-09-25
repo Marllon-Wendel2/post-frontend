@@ -1,0 +1,278 @@
+/* ============================================================ */
+/* home.css — Estilos da Home                                    */
+/* ============================================================ */
+
+/* Barra de busca */
+.search-bar {
+  padding: 8px 12px 0;
+}
+
+.search-bar ion-searchbar {
+  --background: #f3f4f6;
+  --border-radius: 12px;
+  --box-shadow: none;
+  --placeholder-color: #9ca3af;
+  --icon-color: #6b7280;
+  padding: 0;
+}
+
+/* Loading */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  padding: 48px 0;
+}
+
+/* Estado vazio */
+.empty-state {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+  color: #6b7280;
+  text-align: center;
+}
+
+.empty-icon {
+  font-size: 48px;
+  margin-bottom: 12px;
+  color: #d1d5db;
+}
+
+.empty-state p {
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Grid de produtos - 2 colunas (mobile) */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  padding: 12px;
+  padding-bottom: 100px;
+}
+
+/* Card do produto */
+.product-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  overflow: hidden;
+}
+
+.product-card:active {
+  transform: scale(0.97);
+}
+
+/* Card selecionado */
+.product-card.selected {
+  box-shadow: 0 0 0 3px #16a34a;
+}
+
+/* Card inativo */
+.product-card.inactive {
+  opacity: 0.6;
+}
+
+.product-card.inactive:active {
+  transform: none;
+}
+
+/* Badge de inativo */
+.inactive-badge {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  z-index: 10;
+  background: #6b7280;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+/* Imagem do produto */
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.product-image.dimmed {
+  filter: grayscale(60%);
+}
+
+/* Checkmark de seleção */
+.checkmark-overlay {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkmark-overlay svg {
+  font-size: 26px;
+  color: var(--ion-color-success);
+}
+
+/* Corpo do card */
+.card-body {
+  padding: 8px 10px 10px;
+}
+
+/* Título do produto */
+.product-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1a1a1a;
+  line-height: 1.3;
+  margin: 0 0 4px 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Preço */
+.product-price {
+  font-size: 14px;
+  font-weight: 700;
+  color: #16a34a;
+  margin: 0 0 2px 0;
+}
+
+/* Vendedor */
+.product-seller {
+  font-size: 11px;
+  color: #6b7280;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ============================================================ */
+/* Botão flutuante (FAB)                                         */
+/* ============================================================ */
+
+.fab-container {
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 90;
+}
+
+.fab-button {
+  --border-radius: 24px;
+  font-weight: 600;
+  font-size: 14px;
+  --box-shadow: 0 4px 16px rgba(22, 163, 74, 0.4);
+}
+
+/* ============================================================ */
+/* Tablet (768px+) — 3 colunas                                   */
+/* ============================================================ */
+
+@media (min-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    padding: 20px 24px;
+    padding-bottom: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .product-card {
+    border-radius: 14px;
+  }
+
+  .product-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  }
+
+  .product-card:active {
+    transform: scale(0.98);
+  }
+
+  .card-body {
+    padding: 10px 12px 12px;
+  }
+
+  .product-title {
+    font-size: 13px;
+  }
+
+  .product-price {
+    font-size: 15px;
+  }
+
+  .product-seller {
+    font-size: 12px;
+  }
+
+  .checkmark-overlay {
+    width: 32px;
+    height: 32px;
+  }
+
+  .checkmark-overlay svg {
+    font-size: 30px;
+  }
+
+  .fab-container {
+    bottom: 32px;
+  }
+
+  .fab-button {
+    font-size: 15px;
+  }
+}
+
+/* ============================================================ */
+/* Desktop (1024px+) — 4 colunas                                 */
+/* ============================================================ */
+
+@media (min-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 24px 32px;
+    max-width: 1200px;
+  }
+
+  .card-body {
+    padding: 12px 14px 14px;
+  }
+
+  .product-title {
+    font-size: 14px;
+  }
+
+  .product-price {
+    font-size: 16px;
+  }
+
+  .product-seller {
+    font-size: 13px;
+  }
+}
