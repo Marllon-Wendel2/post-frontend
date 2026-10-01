@@ -3,7 +3,6 @@
 import { HomeOutlined, PlusCircleOutlined, SearchOutlined, UserOutlined } from '@ant-design/icons';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { IonLabel } from '@ionic/react';
 import styles from './bottom-nav.module.css';
 
 const menuItems = [
@@ -25,7 +24,7 @@ export default function BottomNav() {
           className={`${styles['nav-item']} ${pathname.startsWith(item.route) ? styles.active : ''}`}
         >
           <item.Icon />
-          <IonLabel>{item.label}</IonLabel>
+          <span>{item.label}</span>
         </Link>
       ))}
     </nav>
