@@ -6,8 +6,25 @@
   min-height: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
+  gap: 18px;
   padding: 32px 24px;
+}
+
+/* Card glass central */
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 32px 24px 28px;
+  border-radius: 28px;
+  background: var(--np-glass-strong);
+  border: 1px solid var(--np-glass-line);
+  backdrop-filter: blur(32px) saturate(150%);
+  -webkit-backdrop-filter: blur(32px) saturate(150%);
+  box-shadow:
+    0 24px 60px rgba(11, 46, 30, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
 /* ============================================================ */
@@ -18,28 +35,29 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 24px;
 }
 
 .logo-img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
+  width: 72px;
+  height: 72px;
+  border-radius: 20px;
   object-fit: cover;
-  box-shadow: 0 8px 24px rgba(22, 163, 74, 0.3);
+  box-shadow: 0 12px 28px rgba(22, 163, 74, 0.4);
   margin-bottom: 16px;
 }
 
 .app-title {
-  font-size: 28px;
-  font-weight: 700;
-  color: #1a1a1a;
+  font-family: var(--np-font-display);
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--np-ink);
   margin: 0 0 6px 0;
 }
 
 .app-subtitle {
-  font-size: 15px;
-  color: #6b7280;
+  font-size: 14px;
+  color: var(--np-text-secondary);
   margin: 0;
 }
 
@@ -50,27 +68,30 @@
 .auth-form {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 14px;
 }
 
 .error-banner {
-  background: #fef2f2;
+  background: rgba(254, 242, 242, 0.9);
   border: 1px solid #fecaca;
-  border-radius: 12px;
+  border-radius: 14px;
   padding: 12px 14px;
   font-size: 13px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .field-group {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 7px;
 }
 
 .field-label {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
-  color: #374151;
+  color: var(--np-text-secondary);
+  letter-spacing: 0.02em;
 }
 
 .field-hint {
@@ -79,15 +100,27 @@
 }
 
 .form-input {
-  --background: #f9fafb;
-  --border-radius: 12px;
+  --background: rgba(255, 255, 255, 0.72);
+  --border-radius: 14px;
   --padding-start: 14px;
   --padding-end: 14px;
   --padding-top: 12px;
   --padding-bottom: 12px;
-  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --box-shadow: 0 1px 3px rgba(11, 46, 30, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: 14px;
   font-size: 15px;
   min-height: 48px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-input:focus-within {
+  border-color: rgba(22, 163, 74, 0.65);
+  box-shadow:
+    0 0 0 3px rgba(22, 163, 74, 0.15),
+    0 8px 20px rgba(11, 46, 30, 0.08);
 }
 
 /* ============================================================ */
@@ -98,6 +131,10 @@
   padding-top: 4px;
 }
 
+.submit-area ion-button {
+  width: 100%;
+}
+
 /* ============================================================ */
 /* Footer / Link                                                 */
 /* ============================================================ */
@@ -105,46 +142,58 @@
 .auth-footer {
   text-align: center;
   font-size: 14px;
-  margin-top: 8px;
+  margin-top: 2px;
 }
 
 .link {
-  color: #16a34a;
+  color: var(--np-accent);
   font-weight: 600;
   text-decoration: none;
   margin-left: 4px;
+  transition: color 0.2s ease;
 }
 
 .link:hover {
+  color: var(--np-accent-teal);
   text-decoration: underline;
 }
 
+.auth-legal {
+  max-width: 420px;
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--np-text-muted);
+  text-align: center;
+}
+
 /* ============================================================ */
-/* Desktop — Container centralizado                               */
+/* Desktop                                                       */
 /* ============================================================ */
 
 @media (min-width: 768px) {
   .auth-container {
-    max-width: 440px;
-    margin: 0 auto;
     padding: 48px 40px;
   }
 
+  .auth-card {
+    padding: 40px 36px 34px;
+  }
+
   .logo-img {
-    width: 120px;
-    height: 120px;
+    width: 84px;
+    height: 84px;
   }
 
   .app-title {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   .app-subtitle {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .auth-form {
-    gap: 22px;
+    gap: 16px;
   }
 
   .form-input {
