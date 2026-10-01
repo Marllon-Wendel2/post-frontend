@@ -20,7 +20,7 @@
 /* RESET E ESTILOS BASE                                          */
 /* ============================================================ */
 
-*,
+ *,
 *::before,
 *::after {
   margin: 0;
@@ -30,19 +30,78 @@
 
 @layer theme {
   :root {
-    --font-sans: var(--font-audiowide), cursive;
-    --default-font-family: var(--font-audiowide), cursive;
+    --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+    --default-font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   }
 }
 
+:root {
+  /* Cores */
+  --np-accent: #16a34a;
+  --np-accent-bright: #22c55e;
+  --np-accent-teal: #0d9488;
+  --np-accent-soft: rgba(22, 163, 74, 0.12);
+  --np-ink: #0b2018;
+  --np-text-secondary: #48604f;
+  --np-text-muted: #8a9a91;
+  --np-danger: #ef4444;
+
+  /* Glass */
+  --np-glass: rgba(255, 255, 255, 0.55);
+  --np-glass-strong: rgba(255, 255, 255, 0.8);
+  --np-glass-line: rgba(255, 255, 255, 0.75);
+  --np-blur: 24px;
+
+  /* Sombras */
+  --np-shadow-card: 0 8px 24px rgba(11, 46, 30, 0.08);
+  --np-shadow-hover: 0 26px 52px rgba(13, 92, 51, 0.18), 0 6px 16px rgba(11, 46, 30, 0.1);
+  --np-shadow-glow: 0 12px 26px rgba(22, 163, 74, 0.35);
+
+  /* Tipografia */
+  --np-font-ui: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --np-font-display: var(--font-audiowide), ui-sans-serif, cursive;
+
+  /* Ionic */
+  --ion-font-family: var(--np-font-ui);
+  --ion-color-success: #16a34a;
+  --ion-color-success-rgb: 22, 163, 74;
+  --ion-color-success-contrast: #ffffff;
+  --ion-color-success-contrast-rgb: 255, 255, 255;
+  --ion-color-success-shade: #12813d;
+  --ion-color-success-tint: #2db25b;
+  --ion-color-medium: #8a9a91;
+  --ion-color-medium-rgb: 138, 154, 145;
+  --ion-color-medium-contrast: #ffffff;
+  --ion-color-medium-contrast-rgb: 255, 255, 255;
+  --ion-color-medium-shade: #78877f;
+  --ion-color-medium-tint: #96a69d;
+  --ion-color-danger: #ef4444;
+  --ion-color-danger-rgb: 239, 68, 68;
+  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-contrast-rgb: 255, 255, 255;
+  --ion-color-danger-shade: #d13b3b;
+  --ion-color-danger-tint: #f15757;
+}
+
 html {
-  font-family: var(--font-audiowide), cursive !important;
-  --ion-font-family: var(--font-audiowide), cursive;
+  font-family: var(--np-font-ui);
+  --ion-font-family: var(--np-font-ui);
   height: 100dvh;
-  background-color: #ffffff;
+  color-scheme: light;
+  background-color: #eaf4ee;
+  background-image:
+    radial-gradient(420px 420px at 6% 4%, rgba(22, 163, 74, 0.16), transparent 70%),
+    radial-gradient(480px 480px at 94% 16%, rgba(13, 148, 136, 0.14), transparent 70%),
+    radial-gradient(420px 420px at 12% 88%, rgba(163, 230, 53, 0.15), transparent 70%),
+    radial-gradient(520px 520px at 88% 92%, rgba(22, 163, 74, 0.12), transparent 70%),
+    linear-gradient(225deg, #f2faf5 0%, #dcefe4 100%);
+  background-attachment: fixed;
 }
 
 body {
+  background: transparent;
+  color: var(--np-ink);
+  font-family: var(--np-font-ui);
   overflow-x: hidden;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
@@ -52,6 +111,7 @@ body {
 /* Remove sublinhado padrão de links */
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 /* Remove borda padrão de imagens */
@@ -60,16 +120,142 @@ img {
   max-width: 100%;
 }
 
+/* Conteúdo translúcido para o fundo mesh aparecer */
+ion-content {
+  --background: transparent;
+  color: var(--np-ink);
+}
+
+ion-modal ion-content {
+  --background: rgba(255, 255, 255, 0.94);
+}
+
+/* ============================================================ */
+/* UTILITIES                                                     */
+/* ============================================================ */
+
+.glass {
+  background: var(--np-glass);
+  border: 1px solid var(--np-glass-line);
+  backdrop-filter: blur(var(--np-blur)) saturate(150%);
+  -webkit-backdrop-filter: blur(var(--np-blur)) saturate(150%);
+  box-shadow: var(--np-shadow-card);
+}
+
+.glass-strong {
+  background: var(--np-glass-strong);
+  border: 1px solid var(--np-glass-line);
+  backdrop-filter: blur(var(--np-blur)) saturate(150%);
+  -webkit-backdrop-filter: blur(var(--np-blur)) saturate(150%);
+  box-shadow: var(--np-shadow-card);
+}
+
+.brand {
+  font-family: var(--np-font-display);
+}
+
+/* ============================================================ */
+/* BARRA DE BUSCA (glass)                                        */
+/* ============================================================ */
+
+.search-shell {
+  background: var(--np-glass-strong);
+  border: 1px solid var(--np-glass-line);
+  border-radius: 16px;
+  backdrop-filter: blur(var(--np-blur)) saturate(150%);
+  -webkit-backdrop-filter: blur(var(--np-blur)) saturate(150%);
+  box-shadow: 0 8px 20px rgba(11, 46, 30, 0.07);
+  padding: 2px;
+  transition:
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.search-shell:focus-within {
+  border-color: rgba(22, 163, 74, 0.55);
+  box-shadow:
+    0 0 0 3px rgba(22, 163, 74, 0.15),
+    0 12px 26px rgba(11, 46, 30, 0.1);
+}
+
+.search-shell ion-searchbar {
+  --background: transparent;
+  --background-focused: transparent;
+  --box-shadow: none;
+  --border-radius: 14px;
+  --placeholder-color: var(--np-text-muted);
+  --icon-color: var(--np-text-secondary);
+  --color: var(--np-ink);
+  --cancel-color: var(--np-accent);
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+}
+
 /* ============================================================ */
 /* BOTÕES REUTILIZÁVEIS                                          */
 /* ============================================================ */
 
 .btn-primary {
+  --background: linear-gradient(90deg, #16a34a 0%, #0d9488 100%);
+  --background-activated: #12813d;
+  --background-hover: linear-gradient(90deg, #1ab055 0%, #0fa89c 100%);
+  --color: #ffffff;
   --border-radius: 14px;
-  font-weight: 700;
-  font-size: 16px;
+  --box-shadow: var(--np-shadow-glow);
+  font-family: var(--np-font-ui);
+  font-weight: 600;
+  font-size: 15px;
   text-transform: none;
+  letter-spacing: 0.01em;
   min-height: 52px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    filter 0.2s ease;
+}
+
+.btn-primary:not([disabled]):hover {
+  transform: translateY(-2px);
+  --box-shadow: 0 18px 36px rgba(22, 163, 74, 0.45);
+  filter: brightness(1.06);
+}
+
+.btn-primary:not([disabled]):active {
+  transform: translateY(0) scale(0.98);
+  --box-shadow: 0 8px 18px rgba(22, 163, 74, 0.35);
+}
+
+.btn-primary:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 3px rgba(22, 163, 74, 0.35),
+    var(--np-shadow-glow);
+}
+
+/* Estado desativado: mantém o botão sólido e verde.
+   O Ionic aplica :host(.button-disabled){opacity:0.5} no shadow DOM; a
+   declaração do documento vence a do shadow tree, então travamos opacity:1
+   e só suavizamos o verde/brilho para sinalizar que está bloqueado. */
+.btn-primary[disabled],
+.btn-primary.button-disabled {
+  opacity: 1;
+  --background: linear-gradient(90deg, #15803d 0%, #0f766e 100%);
+  --background-activated: #14532d;
+  --background-hover: linear-gradient(90deg, #15803d 0%, #0f766e 100%);
+  --color: rgba(255, 255, 255, 0.9);
+  --box-shadow: 0 4px 14px rgba(11, 46, 30, 0.16);
+}
+
+/* Botões success sólidos sem .btn-primary (ex.: repost-modal) */
+ion-button.button-solid.ion-color-success.button-disabled:not(.btn-primary) {
+  opacity: 1;
+  --background: #15803d;
+  --background-activated: #14532d;
+  --background-hover: #15803d;
+  --color: rgba(255, 255, 255, 0.9);
+  --box-shadow: none;
 }
 
 .btn-icon {
@@ -78,11 +264,40 @@ img {
 
 @media (min-width: 768px) {
   .btn-primary {
-    --border-radius: 12px;
-    min-height: 48px;
+    --border-radius: 14px;
+    min-height: 50px;
     max-width: 400px;
     margin: 0 auto;
     width: 100%;
+  }
+}
+
+/* ============================================================ */
+/* Transições suaves (fluidez)                                   */
+/* ============================================================ */
+
+@keyframes np-rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.rise {
+  animation: np-rise 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
 
@@ -93,14 +308,16 @@ img {
 /* ion-content (height: 100%) encontre um tamanho resolvível.     */
 .page-home,
 .page-post,
-.page-profile {
+.page-profile,
+.page-search {
   height: 100%;
 }
 
 @media (min-width: 768px) {
   .page-home ion-content,
   .page-post ion-content,
-  .page-profile ion-content {
-    --padding-start: 72px;
+  .page-profile ion-content,
+  .page-search ion-content {
+    --padding-start: 104px;
   }
 }
