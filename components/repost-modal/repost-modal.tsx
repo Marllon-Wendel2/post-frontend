@@ -8,19 +8,7 @@ import {
   ReloadOutlined,
   ShareAltOutlined,
 } from '@ant-design/icons';
-import {
-  IonButtons,
-  IonContent,
-  IonHeader,
-  IonInput,
-  IonLabel,
-  IonList,
-  IonModal,
-  IonText,
-  IonTitle,
-  IonToolbar,
-} from '@ionic/react';
-import { IonButton, IonItem } from '@/components/ionic';
+import { IonButton, IonItem, IonLabel, IonText, IonButtons, IonContent, IonHeader, IonToolbar, IonTitle, IonList, IonModal, IonInput } from '@/components/ionic';
 import { generateSocialImages } from '@/lib/products';
 import type { Product, SocialImageResponseDto } from '@/lib/types';
 import styles from './repost-modal.module.css';
@@ -225,7 +213,7 @@ export default function RepostModal({
                     <IonText color="success">R$</IonText>
                     <IonInput
                       type="number"
-                      value={item.price}
+                      value={String(item.price)}
                       onIonInput={(e) => updatePrice(item.id, Number(e.detail.value ?? 0))}
                       className={styles['price-input']}
                     />
