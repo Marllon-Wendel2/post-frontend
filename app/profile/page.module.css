@@ -34,6 +34,9 @@
 .profile-page {
   padding: 20px 16px;
   padding-bottom: 110px;
+  height: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .profile-header {
