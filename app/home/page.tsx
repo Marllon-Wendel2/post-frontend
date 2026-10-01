@@ -1,11 +1,11 @@
 'use client';
 
 import { useEffect, useRef, useState, type MouseEvent } from 'react';
-import { CheckCircleFilled, CheckSquareOutlined, SearchOutlined } from '@ant-design/icons';
-import { IonContent, IonSpinner } from '@ionic/react';
+import { CheckSquareOutlined, SearchOutlined } from '@ant-design/icons';
+import { IonButton, IonSpinner } from '@/components/ionic';
 import BottomNav from '@/components/bottom-nav/bottom-nav';
 import IonSearchbarClient from '@/components/IonSearchbarClient';
-import { IonButton } from '@/components/ionic';
+import ProductCard from '@/components/product-card/product-card';
 import RepostModal from '@/components/repost-modal/repost-modal';
 import { useAuth } from '@/lib/auth-context';
 import { useAuthGuard } from '@/lib/guards';
@@ -54,7 +54,7 @@ export default function HomePage() {
     };
   }, []);
 
-  function handleSearch(e: CustomEvent<{ value?: string | number | null }>): void {
+  function handleSearch(e: { detail: { value: string | number | null } }): void {
     const term = String(e.detail.value ?? '');
     setSearchTerm(term);
 
@@ -110,57 +110,50 @@ export default function HomePage() {
 
   return (
     <div className="page-home">
-      <IonContent>
-        <div className={styles['search-bar']}>
+      <header className={styles.header}>
+        <div className={styles.avatar}>{(user?.name || 'N').charAt(0).toUpperCase()}</div>
+        <div className={styles.greeting}>
+          <span className={styles['greeting-hi']}>Bem-vindo de volta</span>
+          <strong className={styles['greeting-name']}>{user?.name ?? 'Vendedora'}</strong>
+        </div>
+      </header>
+
+      <div className={styles['search-row']}>
+        <div className="search-shell">
           <IonSearchbarClient
             value={searchTerm}
             onIonInput={handleSearch}
             placeholder="Buscar produto..."
-            debounce={0}
           />
         </div>
+      </div>
 
-        {isSearching ? (
-          <div className={styles['loading-container']}>
-            <IonSpinner name="crescent" color="success" />
+      {isSearching ? (
+        <div className={styles['loading-container']}>
+          <IonSpinner name="crescent" color="success" />
+        </div>
+      ) : (
+        <>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>
+              {searchResults !== null ? 'Resultados' : 'Novidades'}
+            </h2>
+            {searchResults !== null && (
+              <span className={styles['section-count']}>
+                {displayedProducts.length} produto(s)
+              </span>
+            )}
           </div>
-        ) : (
+
           <div className={styles['product-grid']}>
             {displayedProducts.map((product) => (
-              <div
+              <ProductCard
                 key={product.id}
-                className={[
-                  styles['product-card'],
-                  selectedIds.has(product.id) ? styles.selected : '',
-                  !product.isActive ? styles.inactive : '',
-                ]
-                  .filter(Boolean)
-                  .join(' ')}
-                onClick={(e) => toggleSelection(product.id, e)}
-              >
-                {selectedIds.has(product.id) && (
-                  <div className={styles['checkmark-overlay']}>
-                    <CheckCircleFilled />
-                  </div>
-                )}
-
-                {!product.isActive && <div className={styles['inactive-badge']}>Inativo</div>}
-
-                <div className="image-container">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={product.imageUrl}
-                    alt={product.title}
-                    className={[styles['product-image'], !product.isActive ? styles.dimmed : '']
-                      .filter(Boolean)
-                      .join(' ')}
-                  />
-                </div>
-                <div className={styles['card-body']}>
-                  <h3 className={styles['product-title']}>{product.title}</h3>
-                  <p className={styles['product-price']}>R$ {product.price.toFixed(2)}</p>
-                </div>
-              </div>
+                product={product}
+                selectable
+                selected={selectedIds.has(product.id)}
+                onToggle={toggleSelection}
+              />
             ))}
 
             {displayedProducts.length === 0 && searchTerm && (
@@ -170,8 +163,8 @@ export default function HomePage() {
               </div>
             )}
           </div>
-        )}
-      </IonContent>
+        </>
+      )}
 
       {selectedCount > 0 && (
         <div className={styles['fab-container']}>

@@ -3,15 +3,8 @@
 import { useRouter } from 'next/navigation';
 import { useRef, useState, type ChangeEvent } from 'react';
 import { CameraOutlined, CheckOutlined, ReloadOutlined } from '@ant-design/icons';
-import {
-  IonContent,
-  IonInput,
-  IonLabel,
-  IonText,
-  useIonToast,
-} from '@ionic/react';
+import { IonButton, IonInput, IonLabel, IonText } from '@/components/ionic';
 import BottomNav from '@/components/bottom-nav/bottom-nav';
-import { IonButton } from '@/components/ionic';
 import { useAuth } from '@/lib/auth-context';
 import { useAuthGuard } from '@/lib/guards';
 import { addProduct } from '@/lib/products';
@@ -21,7 +14,6 @@ export default function PostPage() {
   useAuthGuard();
   const { user } = useAuth();
   const router = useRouter();
-  const [presentToast] = useIonToast();
 
   const sellerName = user?.name ?? 'Vendedora';
 
@@ -61,11 +53,7 @@ export default function PostPage() {
       router.push('/home');
     } catch (error) {
       console.error('Erro ao publicar produto:', error);
-      await presentToast({
-        message: 'Erro ao publicar produto. Tente novamente.',
-        duration: 3000,
-        color: 'danger',
-      });
+      alert('Erro ao publicar produto. Tente novamente.');
     } finally {
       setIsSubmitting(false);
     }
@@ -73,83 +61,81 @@ export default function PostPage() {
 
   return (
     <div className="page-post">
-      <IonContent>
-        <div className={styles['post-form']}>
-          <input
-            id="fileInput"
-            ref={fileInputRef}
-            type="file"
-            accept="image/*"
-            className={styles['file-input-hidden']}
-            onChange={onFileSelected}
-          />
+      <div className={styles['post-form']}>
+        <input
+          id="fileInput"
+          ref={fileInputRef}
+          type="file"
+          accept="image/*"
+          className={styles['file-input-hidden']}
+          onChange={onFileSelected}
+        />
 
-          <div className={styles['upload-area']} onClick={triggerFileInput}>
-            {imagePreview ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src={imagePreview} className={styles['upload-preview']} alt="Pré-visualização" />
-            ) : (
-              <div className={styles['upload-placeholder']}>
-                <CameraOutlined className={styles['upload-icon']} />
-                <IonLabel>Adicionar foto</IonLabel>
-              </div>
-            )}
+        <div className={styles['upload-area']} onClick={triggerFileInput}>
+          {imagePreview ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={imagePreview} className={styles['upload-preview']} alt="Pré-visualização" />
+          ) : (
+            <div className={styles['upload-placeholder']}>
+              <CameraOutlined className={styles['upload-icon']} />
+              <IonLabel>Adicionar foto</IonLabel>
+            </div>
+          )}
+        </div>
+
+        <div className={styles['form-fields']}>
+          <div className={styles['field-group']}>
+            <IonLabel className={styles['field-label']}>Nome do produto</IonLabel>
+            <IonInput
+              type="text"
+              placeholder="Ex: Sabonete de Lavanda"
+              value={title}
+              onIonInput={(e) => setTitle(String(e.detail.value ?? ''))}
+              className={styles['form-input']}
+            />
           </div>
 
-          <div className={styles['form-fields']}>
-            <div className={styles['field-group']}>
-              <IonLabel className={styles['field-label']}>Nome do produto</IonLabel>
-              <IonInput
-                type="text"
-                placeholder="Ex: Sabonete de Lavanda"
-                value={title}
-                onIonInput={(e) => setTitle(String(e.detail.value ?? ''))}
-                className={styles['form-input']}
-              />
-            </div>
-
-            <div className={styles['field-group']}>
-              <IonLabel className={styles['field-label']}>Preço (R$)</IonLabel>
-              <IonInput
-                type="number"
-                placeholder="0,00"
-                value={price}
-                onIonInput={(e) => setPrice(String(e.detail.value ?? ''))}
-                className={styles['form-input']}
-              />
-            </div>
-
-            <div className={styles['field-group']}>
-              <IonLabel className={styles['field-label']}>Vendedora</IonLabel>
-              <div className={styles['seller-badge']}>
-                <IonText color="success">{sellerName}</IonText>
-              </div>
-            </div>
+          <div className={styles['field-group']}>
+            <IonLabel className={styles['field-label']}>Preço (R$)</IonLabel>
+            <IonInput
+              type="number"
+              placeholder="0,00"
+              value={price}
+              onIonInput={(e) => setPrice(String(e.detail.value ?? ''))}
+              className={styles['form-input']}
+            />
           </div>
 
-          <div className={styles['submit-area']}>
-            <IonButton
-              expand="block"
-              color="success"
-              disabled={!isValid || isSubmitting}
-              onClick={submit}
-              className="btn-primary"
-            >
-              {isSubmitting ? (
-                <>
-                  <ReloadOutlined slot="start" className={styles.spin} />
-                  Publicando...
-                </>
-              ) : (
-                <>
-                  <CheckOutlined slot="start" className="btn-icon" />
-                  Publicar
-                </>
-              )}
-            </IonButton>
+          <div className={styles['field-group']}>
+            <IonLabel className={styles['field-label']}>Vendedora</IonLabel>
+            <div className={styles['seller-badge']}>
+              <IonText color="success">{sellerName}</IonText>
+            </div>
           </div>
         </div>
-      </IonContent>
+
+        <div className={styles['submit-area']}>
+          <IonButton
+            expand="block"
+            color="success"
+            disabled={!isValid || isSubmitting}
+            onClick={submit}
+            className="btn-primary"
+          >
+            {isSubmitting ? (
+              <>
+                <ReloadOutlined slot="start" className={styles.spin} />
+                Publicando...
+              </>
+            ) : (
+              <>
+                <CheckOutlined slot="start" className="btn-icon" />
+                Publicar
+              </>
+            )}
+          </IonButton>
+        </div>
+      </div>
 
       <BottomNav />
     </div>

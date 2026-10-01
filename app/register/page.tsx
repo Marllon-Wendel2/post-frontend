@@ -3,8 +3,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
-import { IonContent, IonInput, IonLabel, IonText } from '@ionic/react';
-import { IonButton } from '@/components/ionic';
+import { IonButton, IonInput, IonLabel, IonText } from '@/components/ionic';
 import { useAuth } from '@/lib/auth-context';
 import styles from './page.module.css';
 
@@ -58,8 +57,8 @@ export default function RegisterPage() {
   }
 
   return (
-    <IonContent>
-      <div className={styles['auth-container']}>
+    <div className={styles['auth-container']}>
+      <div className={`${styles['auth-card']} rise`}>
         <div className={styles['auth-header']}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/logo.jpg" alt="NaturaPost" className={styles['logo-img']} />
@@ -68,99 +67,103 @@ export default function RegisterPage() {
         </div>
 
         <div className={styles['auth-form']}>
-          {errorMessage && (
-            <div className={styles['error-banner']}>
-              <IonText color="danger">{errorMessage}</IonText>
-            </div>
-          )}
-
-          <div className={styles['field-group']}>
-            <IonLabel className={styles['field-label']}>Nome completo</IonLabel>
-            <IonInput
-              type="text"
-              placeholder="Seu nome"
-              value={name}
-              onIonInput={(e) => setName(String(e.detail.value ?? ''))}
-              className={styles['form-input']}
-            />
+        {errorMessage && (
+          <div className={styles['error-banner']}>
+            <IonText color="danger">{errorMessage}</IonText>
           </div>
+        )}
 
-          <div className={styles['field-group']}>
-            <IonLabel className={styles['field-label']}>E-mail</IonLabel>
-            <IonInput
-              type="email"
-              placeholder="seu@email.com"
-              value={email}
-              onIonInput={(e) => setEmail(String(e.detail.value ?? ''))}
-              className={styles['form-input']}
-            />
-          </div>
+        <div className={styles['field-group']}>
+          <IonLabel className={styles['field-label']}>Nome completo</IonLabel>
+          <IonInput
+            type="text"
+            placeholder="Seu nome"
+            value={name}
+            onIonInput={(e) => setName(String(e.detail.value ?? ''))}
+            className={styles['form-input']}
+          />
+        </div>
 
-          <div className={styles['field-group']}>
-            <IonLabel className={styles['field-label']}>Telefone (opcional)</IonLabel>
-            <IonInput
-              type="tel"
-              placeholder="(11) 99999-0000"
-              value={phone}
-              onIonInput={(e) => setPhone(String(e.detail.value ?? ''))}
-              className={styles['form-input']}
-            />
-          </div>
+        <div className={styles['field-group']}>
+          <IonLabel className={styles['field-label']}>E-mail</IonLabel>
+          <IonInput
+            type="email"
+            placeholder="seu@email.com"
+            value={email}
+            onIonInput={(e) => setEmail(String(e.detail.value ?? ''))}
+            className={styles['form-input']}
+          />
+        </div>
 
-          <div className={styles['field-group']}>
-            <IonLabel className={styles['field-label']}>Senha</IonLabel>
-            <IonInput
-              type="password"
-              placeholder="Mín. 8 caracteres, 1 maiúscula, 1 especial"
-              value={password}
-              onIonInput={(e) => setPassword(String(e.detail.value ?? ''))}
-              className={styles['form-input']}
-            />
-            {password.length > 0 && !isPasswordValid && (
-              <IonText color="danger" className={styles['field-hint']}>
-                Senha: 8+ caracteres, 1 maiúscula, 1 minúscula, 1 especial
-              </IonText>
-            )}
-          </div>
+        <div className={styles['field-group']}>
+          <IonLabel className={styles['field-label']}>Telefone (opcional)</IonLabel>
+          <IonInput
+            type="tel"
+            placeholder="(11) 99999-0000"
+            value={phone}
+            onIonInput={(e) => setPhone(String(e.detail.value ?? ''))}
+            className={styles['form-input']}
+          />
+        </div>
 
-          <div className={styles['field-group']}>
-            <IonLabel className={styles['field-label']}>Confirmar senha</IonLabel>
-            <IonInput
-              type="password"
-              placeholder="Repita a senha"
-              value={confirmPassword}
-              onIonInput={(e) => setConfirmPassword(String(e.detail.value ?? ''))}
-              className={styles['form-input']}
-            />
-            {confirmPassword.length > 0 && !passwordsMatch && (
-              <IonText color="danger" className={styles['field-hint']}>
-                As senhas não coincidem
-              </IonText>
-            )}
-          </div>
-
-          <div className={styles['submit-area']}>
-            <IonButton
-              expand="block"
-              color="success"
-              disabled={!isFormValid || isLoading}
-              onClick={handleRegister}
-              className="btn-primary"
-            >
-              {isLoading ? 'Criando conta...' : 'Criar conta'}
-            </IonButton>
-          </div>
-
-          <div className={styles['auth-footer']}>
-            <IonText color="medium">
-              Já tem uma conta?
-              <Link href="/login" className={styles.link}>
-                Entrar
-              </Link>
+        <div className={styles['field-group']}>
+          <IonLabel className={styles['field-label']}>Senha</IonLabel>
+          <IonInput
+            type="password"
+            placeholder="Mín. 8 caracteres, 1 maiúscula, 1 especial"
+            value={password}
+            onIonInput={(e) => setPassword(String(e.detail.value ?? ''))}
+            className={styles['form-input']}
+          />
+          {password.length > 0 && !isPasswordValid && (
+            <IonText color="danger" className={styles['field-hint']}>
+              Senha: 8+ caracteres, 1 maiúscula, 1 minúscula, 1 especial
             </IonText>
-          </div>
+          )}
+        </div>
+
+        <div className={styles['field-group']}>
+          <IonLabel className={styles['field-label']}>Confirmar senha</IonLabel>
+          <IonInput
+            type="password"
+            placeholder="Repita a senha"
+            value={confirmPassword}
+            onIonInput={(e) => setConfirmPassword(String(e.detail.value ?? ''))}
+            className={styles['form-input']}
+          />
+          {confirmPassword.length > 0 && !passwordsMatch && (
+            <IonText color="danger" className={styles['field-hint']}>
+              As senhas não coincidem
+            </IonText>
+          )}
+        </div>
+
+        <div className={styles['submit-area']}>
+          <IonButton
+            expand="block"
+            color="success"
+            disabled={!isFormValid || isLoading}
+            onClick={handleRegister}
+            className="btn-primary"
+          >
+            {isLoading ? 'Criando conta...' : 'Criar conta'}
+          </IonButton>
+        </div>
+
+        <div className={styles['auth-footer']}>
+          <IonText color="medium">
+            Já tem uma conta?
+            <Link href="/login" className={styles.link}>
+              Entrar
+            </Link>
+          </IonText>
+        </div>
         </div>
       </div>
-    </IonContent>
+
+      <p className={styles['auth-legal']}>
+        Ao criar sua conta você aceita os Termos e a Política de Privacidade.
+      </p>
+    </div>
   );
 }

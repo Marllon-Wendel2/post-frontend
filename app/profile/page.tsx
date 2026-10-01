@@ -2,10 +2,9 @@
 
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import { LogoutOutlined } from '@ant-design/icons';
-import { IonContent, IonLabel } from '@ionic/react';
+import { LogoutOutlined, ShoppingOutlined } from '@ant-design/icons';
+import { IonButton, IonLabel } from '@/components/ionic';
 import BottomNav from '@/components/bottom-nav/bottom-nav';
-import { IonButton } from '@/components/ionic';
 import { useAuth } from '@/lib/auth-context';
 import { useAuthGuard } from '@/lib/guards';
 import { getProfile, type ProfileData } from '@/lib/profile';
@@ -54,14 +53,14 @@ export default function ProfilePage() {
 
   return (
     <div className="page-profile">
-      <IonContent>
+      <div className={styles['profile-page']}>
         {isLoading ? (
           <div className={styles['loading-container']}>
             <div className={styles['loading-spinner']} />
             <IonLabel>Carregando perfil...</IonLabel>
           </div>
         ) : profile ? (
-          <div className={styles['profile-page']}>
+          <>
             <div className={styles['profile-header']}>
               <div className={styles.avatar}>
                 <span className={styles['avatar-text']}>{user?.name?.charAt(0)}</span>
@@ -73,6 +72,9 @@ export default function ProfilePage() {
 
             <div className={styles['stats-grid']}>
               <div className={styles['stat-card']}>
+                <span className={styles['stat-icon']}>
+                  <ShoppingOutlined />
+                </span>
                 <span className={styles['stat-value']}>{profile.stats.productsCount}</span>
                 <span className={styles['stat-label']}>Produtos</span>
               </div>
@@ -108,9 +110,9 @@ export default function ProfilePage() {
                 Sair da conta
               </IonButton>
             </div>
-          </div>
+          </>
         ) : null}
-      </IonContent>
+      </div>
 
       <BottomNav />
     </div>

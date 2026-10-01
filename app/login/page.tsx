@@ -3,8 +3,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
-import { IonContent, IonInput, IonLabel, IonText } from '@ionic/react';
-import { IonButton } from '@/components/ionic';
+import { IonButton, IonInput, IonLabel, IonText } from '@/components/ionic';
 import { useAuth } from '@/lib/auth-context';
 import styles from './page.module.css';
 
@@ -39,8 +38,8 @@ export default function LoginPage() {
   }
 
   return (
-    <IonContent>
-      <div className={styles['auth-container']}>
+    <div className={styles['auth-container']}>
+      <div className={`${styles['auth-card']} rise`}>
         <div className={styles['auth-header']}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/logo.jpg" alt="NaturaPost" className={styles['logo-img']} />
@@ -99,6 +98,10 @@ export default function LoginPage() {
           </div>
         </div>
       </div>
-    </IonContent>
+
+      <p className={styles['auth-legal']}>
+        Ao continuar você aceita os Termos e a Política de Privacidade.
+      </p>
+    </div>
   );
 }
