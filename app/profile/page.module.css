@@ -350,3 +350,104 @@
     gap: 16px;
   }
 }
+
+/* ============================================================ */
+/* Telas pequenas (< 360x550) — perfil compacto                   */
+/* ============================================================ */
+
+@media (max-width: 359px), (max-height: 549px) {
+  .profile-page {
+    padding: 12px 10px;
+    padding-bottom: 84px;
+  }
+
+  .profile-header {
+    padding: 16px 12px;
+    border-radius: 18px;
+  }
+
+  .avatar {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 10px;
+  }
+
+  .avatar-text {
+    font-size: 28px;
+  }
+
+  .user-name {
+    font-size: 20px;
+  }
+
+  .user-email,
+  .user-phone {
+    font-size: 13px;
+  }
+
+  .stats-grid {
+    gap: 8px;
+    padding: 12px 0;
+  }
+
+  .stat-card {
+    gap: 4px;
+    padding: 12px 8px;
+    border-radius: 16px;
+  }
+
+  .stat-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 15px;
+    border-radius: 10px;
+  }
+
+  .stat-value {
+    font-size: 19px;
+  }
+
+  .stat-label {
+    font-size: 11px;
+  }
+
+  .section-title {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .products-list {
+    gap: 8px;
+  }
+
+  .product-item {
+    gap: 8px;
+    padding: 8px;
+    border-radius: 14px;
+  }
+
+  .product-thumb {
+    width: 46px;
+    height: 46px;
+    border-radius: 10px;
+  }
+
+  .product-title {
+    font-size: 13px;
+    margin-bottom: 2px;
+  }
+
+  .product-price {
+    font-size: 13px;
+  }
+
+  .logout-area {
+    padding-top: 18px;
+  }
+
+  .logout-button {
+    min-height: 44px;
+    font-size: 14px;
+    --border-radius: 12px;
+  }
+}

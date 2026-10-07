@@ -197,3 +197,55 @@
     border-radius: 16px;
   }
 }
+
+/* ============================================================ */
+/* Telas pequenas (< 360x550) — formulário compacto               */
+/* ============================================================ */
+
+@media (max-width: 359px), (max-height: 549px) {
+  .post-form {
+    padding: 10px 10px 84px;
+    gap: 12px;
+  }
+
+  .upload-area {
+    aspect-ratio: 4 / 3;
+    border-radius: 12px;
+  }
+
+  .upload-icon {
+    font-size: 36px;
+  }
+
+  .upload-placeholder ion-label {
+    font-size: 13px;
+  }
+
+  .form-fields {
+    gap: 10px;
+  }
+
+  .field-group {
+    gap: 4px;
+  }
+
+  .field-label {
+    font-size: 12px;
+  }
+
+  .form-input {
+    font-size: 14px;
+    min-height: 42px;
+    --padding-start: 10px;
+    --padding-end: 10px;
+    --padding-top: 9px;
+    --padding-bottom: 9px;
+    --border-radius: 10px;
+  }
+
+  .seller-badge {
+    padding: 9px 10px;
+    font-size: 13px;
+    border-radius: 10px;
+  }
+}

@@ -1,54 +1,83 @@
 /* ============================================================ */
-/* bottom-nav.css — Menu Inferior (Mobile) / Rail (Desktop)      */
+/* bottom-nav — Menu hambúrguer (canto inferior direito)         */
 /* ============================================================ */
 
-/* Mobile: barra glass flutuante em pill */
 .bottom-nav {
   position: fixed;
-  left: 12px;
-  right: 12px;
-  bottom: calc(12px + env(safe-area-inset-bottom));
+  right: 16px;
+  bottom: calc(16px + env(safe-area-inset-bottom));
+  z-index: 100;
   display: flex;
-  align-items: center;
-  height: 64px;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+/* Backdrop invisível: fecha o menu ao tocar fora */
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: rgba(11, 46, 30, 0.18);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+/* Popup vertical acima do botão */
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 180px;
+  padding: 8px;
   background: var(--np-glass-strong);
   backdrop-filter: blur(var(--np-blur)) saturate(160%);
   -webkit-backdrop-filter: blur(var(--np-blur)) saturate(160%);
   border: 1px solid var(--np-glass-line);
-  border-radius: 24px;
+  border-radius: 20px;
   box-shadow: 0 12px 32px rgba(11, 46, 30, 0.16);
-  padding: 6px;
-  gap: 4px;
-  z-index: 100;
+  transform-origin: bottom right;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px) scale(0.96);
+  transition:
+    opacity 0.18s ease,
+    transform 0.18s ease,
+    visibility 0.18s ease;
+}
+
+.menu.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
 }
 
 .nav-item {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  flex: 1;
-  height: 100%;
-  gap: 3px;
-  padding: 4px 0;
-  border-radius: 18px;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 14px;
   color: var(--np-text-muted);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: var(--np-font-ui);
+  white-space: nowrap;
   transition:
     color 0.2s ease,
     background 0.2s ease,
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+    transform 0.2s ease;
 }
 
 .nav-item:hover {
   color: var(--np-ink);
   background: rgba(255, 255, 255, 0.9);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 14px rgba(11, 46, 30, 0.1);
+  transform: translateX(-2px);
 }
 
 .nav-item:active {
-  transform: scale(0.96);
+  transform: scale(0.97);
 }
 
 .nav-item.active {
@@ -61,56 +90,106 @@
   background: rgba(22, 163, 74, 0.16);
 }
 
-.bottom-nav svg {
-  font-size: 22px;
+.nav-item svg {
+  font-size: 18px;
+}
+
+/* Botão circular flutuante */
+.menu-button {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  border: 1px solid var(--np-glass-line);
+  border-radius: 50%;
+  background: var(--np-glass-strong);
+  backdrop-filter: blur(var(--np-blur)) saturate(160%);
+  -webkit-backdrop-filter: blur(var(--np-blur)) saturate(160%);
+  color: var(--np-ink);
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 12px 32px rgba(11, 46, 30, 0.16);
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.menu-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px rgba(11, 46, 30, 0.2);
+}
+
+.menu-button:active {
+  transform: scale(0.94);
+}
+
+.menu-button.active {
+  background: var(--np-accent);
+  border-color: transparent;
+  color: #fff;
+}
+
+.menu-button svg {
   transition: transform 0.2s ease;
 }
 
-.nav-item:hover svg {
-  transform: translateY(-1px);
-}
-
-.bottom-nav ion-label {
-  font-size: 10px;
-  font-weight: 600;
-  margin: 0;
-  font-family: var(--np-font-ui);
-}
-
 /* ============================================================ */
-/* Desktop: rail lateral glass flutuante                         */
+/* Desktop: mantém o mesmo botão no canto inferior direito        */
 /* ============================================================ */
 
 @media (min-width: 768px) {
   .bottom-nav {
-    top: 16px;
-    left: 16px;
-    bottom: 16px;
-    right: auto;
-    width: 72px;
-    height: auto;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
-    padding: 16px 0;
-    border-radius: 28px;
-    box-shadow: 0 16px 40px rgba(11, 46, 30, 0.14);
+    right: 24px;
+    bottom: calc(24px + env(safe-area-inset-bottom));
+  }
+
+  .menu-button {
+    width: 60px;
+    height: 60px;
+    font-size: 26px;
   }
 
   .nav-item {
-    flex: none;
-    width: calc(100% - 12px);
-    height: auto;
-    padding: 12px 0;
-    gap: 5px;
-    border-radius: 18px;
+    font-size: 15px;
+  }
+}
+
+/* ============================================================ */
+/* Telas pequenas (< 360x550) — menu compacto                     */
+/* ============================================================ */
+
+@media (max-width: 359px), (max-height: 549px) {
+  .bottom-nav {
+    right: 10px;
+    bottom: calc(10px + env(safe-area-inset-bottom));
+    gap: 8px;
   }
 
-  .bottom-nav svg {
-    font-size: 24px;
+  .menu {
+    min-width: 148px;
+    padding: 6px;
+    border-radius: 16px;
+    gap: 2px;
   }
 
-  .bottom-nav ion-label {
-    font-size: 9px;
+  .nav-item {
+    padding: 7px 10px;
+    gap: 8px;
+    font-size: 13px;
+    border-radius: 12px;
+  }
+
+  .nav-item svg {
+    font-size: 16px;
+  }
+
+  .menu-button {
+    width: 46px;
+    height: 46px;
+    font-size: 20px;
   }
 }

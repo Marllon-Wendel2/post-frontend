@@ -200,3 +200,70 @@
     min-height: 52px;
   }
 }
+
+/* ============================================================ */
+/* Telas pequenas (< 360x550) — login compacto                    */
+/* ============================================================ */
+
+@media (max-width: 359px), (max-height: 549px) {
+  .auth-container {
+    gap: 12px;
+    padding: 16px 12px;
+  }
+
+  .auth-card {
+    padding: 18px 14px 16px;
+    border-radius: 20px;
+  }
+
+  .auth-header {
+    margin-bottom: 14px;
+  }
+
+  .logo-img {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    margin-bottom: 8px;
+  }
+
+  .app-title {
+    font-size: 19px;
+    margin-bottom: 4px;
+  }
+
+  .app-subtitle {
+    font-size: 12px;
+  }
+
+  .auth-form {
+    gap: 10px;
+  }
+
+  .error-banner {
+    padding: 9px 10px;
+    font-size: 12px;
+  }
+
+  .field-group {
+    gap: 5px;
+  }
+
+  .form-input {
+    font-size: 14px;
+    min-height: 42px;
+    --padding-start: 10px;
+    --padding-end: 10px;
+    --padding-top: 9px;
+    --padding-bottom: 9px;
+    --border-radius: 10px;
+  }
+
+  .auth-footer {
+    font-size: 13px;
+  }
+
+  .auth-legal {
+    font-size: 10px;
+  }
+}

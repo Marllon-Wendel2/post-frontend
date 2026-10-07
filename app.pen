@@ -4,15 +4,3308 @@
     {
       "type": "frame",
       "id": "bi8Au",
+      "x": -248,
+      "y": 851,
+      "name": "Home — Mobile",
+      "clip": true,
+      "width": 390,
+      "height": 844,
+      "fill": {
+        "type": "gradient",
+        "gradientType": "linear",
+        "enabled": true,
+        "rotation": 225,
+        "size": {
+          "height": 1
+        },
+        "colors": [
+          {
+            "color": "#F2FAF5",
+            "position": 0
+          },
+          {
+            "color": "#DCEFE4",
+            "position": 1
+          }
+        ]
+      },
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "ellipse",
+          "id": "tU5kY",
+          "layoutPosition": "absolute",
+          "x": -130,
+          "y": -150,
+          "name": "Blob Verde",
+          "fill": {
+            "type": "gradient",
+            "gradientType": "radial",
+            "enabled": true,
+            "rotation": 0,
+            "size": {
+              "width": 1,
+              "height": 1
+            },
+            "colors": [
+              {
+                "color": "#16A34A4D",
+                "position": 0
+              },
+              {
+                "color": "#16A34A00",
+                "position": 1
+              }
+            ]
+          },
+          "width": 420,
+          "height": 420,
+          "effect": {
+            "type": "blur",
+            "radius": 50
+          }
+        },
+        {
+          "type": "ellipse",
+          "id": "wQRFm",
+          "layoutPosition": "absolute",
+          "x": 190,
+          "y": 90,
+          "name": "Blob Teal",
+          "fill": {
+            "type": "gradient",
+            "gradientType": "radial",
+            "enabled": true,
+            "rotation": 0,
+            "size": {
+              "width": 1,
+              "height": 1
+            },
+            "colors": [
+              {
+                "color": "#0D948840",
+                "position": 0
+              },
+              {
+                "color": "#0D948800",
+                "position": 1
+              }
+            ]
+          },
+          "width": 360,
+          "height": 360,
+          "effect": {
+            "type": "blur",
+            "radius": 50
+          }
+        },
+        {
+          "type": "ellipse",
+          "id": "wPLd9",
+          "layoutPosition": "absolute",
+          "x": -110,
+          "y": 520,
+          "name": "Blob Lime",
+          "fill": {
+            "type": "gradient",
+            "gradientType": "radial",
+            "enabled": true,
+            "rotation": 0,
+            "size": {
+              "width": 1,
+              "height": 1
+            },
+            "colors": [
+              {
+                "color": "#A3E63540",
+                "position": 0
+              },
+              {
+                "color": "#A3E63500",
+                "position": 1
+              }
+            ]
+          },
+          "width": 380,
+          "height": 380,
+          "effect": {
+            "type": "blur",
+            "radius": 50
+          }
+        },
+        {
+          "type": "frame",
+          "id": "V7whL",
+          "name": "Conteúdo",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 14,
+          "padding": [
+            14,
+            16,
+            110,
+            16
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "KtEm6",
+              "name": "Header",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "IkwZs",
+                  "name": "Usuário",
+                  "gap": 10,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "PMMUG",
+                      "name": "Avatar",
+                      "width": 42,
+                      "height": 42,
+                      "fill": {
+                        "type": "gradient",
+                        "gradientType": "linear",
+                        "enabled": true,
+                        "rotation": 225,
+                        "size": {
+                          "height": 1
+                        },
+                        "colors": [
+                          {
+                            "color": "#16A34A",
+                            "position": 0
+                          },
+                          {
+                            "color": "#0D9488",
+                            "position": 1
+                          }
+                        ]
+                      },
+                      "cornerRadius": 999,
+                      "effect": {
+                        "type": "shadow",
+                        "shadowType": "outer",
+                        "color": "#16A34A4D",
+                        "offset": {
+                          "x": 0,
+                          "y": 8
+                        },
+                        "blur": 18
+                      },
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "SJ7iE",
+                          "name": "Inicial",
+                          "fill": "#FFFFFF",
+                          "content": "M",
+                          "fontFamily": "$font-display",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "YLoMM",
+                      "name": "Saudação",
+                      "layout": "vertical",
+                      "gap": 2,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "TOWK1",
+                          "name": "Olá",
+                          "fill": "$text-muted",
+                          "content": "Bem-vindo de volta",
+                          "fontFamily": "$font-ui",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "d5h8r",
+                          "name": "Nome",
+                          "fill": "$ink",
+                          "content": "Marllon",
+                          "fontFamily": "$font-ui",
+                          "fontSize": 16,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "vvkK9",
+                  "name": "Notificações",
+                  "width": 42,
+                  "height": 42,
+                  "fill": "$glass",
+                  "cornerRadius": 999,
+                  "stroke": "$glass-stroke",
+                  "strokeWidth": 1,
+                  "effect": {
+                    "type": "background_blur",
+                    "radius": 24
+                  },
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "uerpl",
+                      "name": "Icon",
+                      "width": 18,
+                      "height": 18,
+                      "icon": "bell",
+                      "library": "lucide",
+                      "fill": "$ink"
+                    },
+                    {
+                      "type": "ellipse",
+                      "id": "RJrAo",
+                      "layoutPosition": "absolute",
+                      "x": 26,
+                      "y": 8,
+                      "name": "Badge",
+                      "fill": "$accent",
+                      "width": 9,
+                      "height": 9,
+                      "stroke": "#FFFFFF",
+                      "strokeWidth": 2
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "pNk7V",
+              "type": "ref",
+              "ref": "kSzAE",
+              "name": "Search Bar",
+              "width": "fill_container"
+            },
+            {
+              "type": "frame",
+              "id": "jCwb0",
+              "name": "Filtros",
+              "width": "fill_container",
+              "gap": 8,
+              "children": [
+                {
+                  "id": "JZH53",
+                  "type": "ref",
+                  "ref": "zjUte",
+                  "name": "Todos",
+                  "fill": "$accent",
+                  "stroke": "#16A34A",
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#16A34A4D",
+                    "offset": {
+                      "x": 0,
+                      "y": 8
+                    },
+                    "blur": 18
+                  },
+                  "descendants": {
+                    "GT6IM": {
+                      "fill": "#FFFFFF"
+                    }
+                  }
+                },
+                {
+                  "id": "X3B1R",
+                  "type": "ref",
+                  "ref": "zjUte",
+                  "name": "Skincare",
+                  "descendants": {
+                    "GT6IM": {
+                      "content": "Skincare"
+                    }
+                  }
+                },
+                {
+                  "id": "q4hF0j",
+                  "type": "ref",
+                  "ref": "zjUte",
+                  "name": "Perfumes",
+                  "descendants": {
+                    "GT6IM": {
+                      "content": "Perfumes"
+                    }
+                  }
+                },
+                {
+                  "id": "T01l1",
+                  "type": "ref",
+                  "ref": "zjUte",
+                  "name": "Corpo",
+                  "descendants": {
+                    "GT6IM": {
+                      "content": "Corpo"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "GgiqC",
+              "name": "Seção",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "eKqTH",
+                  "name": "Título",
+                  "fill": "$ink",
+                  "content": "Novidades",
+                  "fontFamily": "$font-ui",
+                  "fontSize": 16,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "nXaU2",
+                  "name": "Link",
+                  "fill": "$accent",
+                  "content": "Ver tudo",
+                  "fontFamily": "$font-ui",
+                  "fontSize": 12,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "pAIPo",
+              "name": "Linha 1",
+              "width": "fill_container",
+              "gap": 12,
+              "children": [
+                {
+                  "id": "VddZp",
+                  "type": "ref",
+                  "ref": "wfl3y",
+                  "name": "Card · Sabonete Lavanda",
+                  "width": "fill_container",
+                  "descendants": {
+                    "cYK4S": {
+                      "height": 136,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1603533626120-2d5704173332?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTA4Njc2OTF8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "cover"
+                      }
+                    },
+                    "F0LEbV": {
+                      "content": "Sabonete Lavanda"
+                    },
+                    "zoAOD": {
+                      "content": "R$ 32,90"
+                    }
+                  }
+                },
+                {
+                  "id": "Kzai7",
+                  "type": "ref",
+                  "ref": "wfl3y",
+                  "name": "Card · Creme Ekos",
+                  "width": "fill_container",
+                  "descendants": {
+                    "cYK4S": {
+                      "height": 136,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1643747238009-6863ea63e78d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTA4Njc2OTF8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "cover"
+                      }
+                    },
+                    "E7Jml0": {
+                      "content": "Oferta"
+                    },
+                    "FNk3c": {
+                      "enabled": true
+                    },
+                    "F0LEbV": {
+                      "content": "Creme Ekos"
+                    },
+                    "zoAOD": {
+                      "content": "R$ 89,90"
+                    },
+                    "CuGLF": {
+                      "enabled": true,
+                      "padding": [
+                        7,
+                        8
+                      ]
+                    },
+                    "F1Tot": {
+                      "enabled": false
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "yQQ4U",
+              "name": "Linha 2",
+              "width": "fill_container",
+              "gap": 12,
+              "children": [
+                {
+                  "id": "wiH4L",
+                  "type": "ref",
+                  "ref": "wfl3y",
+                  "name": "Card · Perfume Lumina",
+                  "width": "fill_container",
+                  "descendants": {
+                    "cYK4S": {
+                      "height": 136,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1708733145706-82da0d0596e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTA4Njc2OTF8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "cover"
+                      }
+                    },
+                    "M9GZZ": {
+                      "enabled": false
+                    },
+                    "F0LEbV": {
+                      "content": "Perfume Lumina"
+                    },
+                    "zoAOD": {
+                      "content": "R$ 219,00"
+                    }
+                  }
+                },
+                {
+                  "id": "EB614",
+                  "type": "ref",
+                  "ref": "wfl3y",
+                  "name": "Card · Óleo Essencial",
+                  "width": "fill_container",
+                  "descendants": {
+                    "cYK4S": {
+                      "height": 136,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1564277287253-934c868e54ea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTA4Njc2OTF8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "cover"
+                      }
+                    },
+                    "M9GZZ": {
+                      "enabled": false
+                    },
+                    "F0LEbV": {
+                      "content": "Óleo Essencial"
+                    },
+                    "zoAOD": {
+                      "content": "R$ 54,90"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "p3Cu2",
+          "layoutPosition": "absolute",
+          "x": 0,
+          "y": 664,
+          "name": "FAB Wrap",
+          "width": 390,
+          "justifyContent": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "VwD3H",
+              "name": "FAB Repostar",
+              "fill": {
+                "type": "gradient",
+                "gradientType": "linear",
+                "enabled": true,
+                "rotation": 270,
+                "size": {
+                  "height": 1
+                },
+                "colors": [
+                  {
+                    "color": "#16A34A",
+                    "position": 0
+                  },
+                  {
+                    "color": "#0D9488",
+                    "position": 1
+                  }
+                ]
+              },
+              "cornerRadius": 999,
+              "effect": [
+                {
+                  "type": "shadow",
+                  "shadowType": "outer",
+                  "color": "#16A34A66",
+                  "offset": {
+                    "x": 0,
+                    "y": 14
+                  },
+                  "blur": 30
+                },
+                {
+                  "type": "shadow",
+                  "shadowType": "outer",
+                  "color": "#0B2E1E33",
+                  "offset": {
+                    "x": 0,
+                    "y": 4
+                  },
+                  "blur": 10
+                }
+              ],
+              "gap": 8,
+              "padding": [
+                14,
+                22
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "SE9x6",
+                  "name": "Icon",
+                  "width": 16,
+                  "height": 16,
+                  "icon": "share-2",
+                  "library": "lucide",
+                  "fill": "#FFFFFF"
+                },
+                {
+                  "type": "text",
+                  "id": "qnICe",
+                  "name": "Label",
+                  "fill": "#FFFFFF",
+                  "content": "Repostar (2)",
+                  "fontFamily": "$font-ui",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "GXja4",
+          "layoutPosition": "absolute",
+          "x": 0,
+          "y": 761,
+          "name": "Nav Wrap",
+          "width": 390,
+          "padding": [
+            0,
+            12
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "PZbxR",
+              "name": "Bottom Nav",
+              "width": "fill_container",
+              "fill": "$glass-strong",
+              "cornerRadius": 24,
+              "stroke": "$glass-stroke",
+              "strokeWidth": 1,
+              "effect": [
+                {
+                  "type": "background_blur",
+                  "radius": 24
+                },
+                {
+                  "type": "shadow",
+                  "shadowType": "outer",
+                  "color": "#0B2E1E24",
+                  "offset": {
+                    "x": 0,
+                    "y": 12
+                  },
+                  "blur": 32
+                }
+              ],
+              "padding": [
+                6,
+                10
+              ],
+              "children": [
+                {
+                  "id": "T4O4JN",
+                  "type": "ref",
+                  "ref": "fQaFt",
+                  "name": "Nav · Home",
+                  "width": "fill_container",
+                  "fill": "#16A34A1F",
+                  "descendants": {
+                    "vTDho": {
+                      "icon": "house",
+                      "fill": "$accent"
+                    },
+                    "k6gzl": {
+                      "content": "Home",
+                      "fill": "$accent"
+                    }
+                  }
+                },
+                {
+                  "id": "SaPGY",
+                  "type": "ref",
+                  "ref": "fQaFt",
+                  "name": "Nav · Buscar",
+                  "width": "fill_container",
+                  "descendants": {
+                    "vTDho": {
+                      "icon": "search"
+                    },
+                    "k6gzl": {
+                      "content": "Buscar"
+                    }
+                  }
+                },
+                {
+                  "id": "F7N4Q9",
+                  "type": "ref",
+                  "ref": "fQaFt",
+                  "name": "Nav · Postar",
+                  "width": "fill_container",
+                  "descendants": {
+                    "vTDho": {
+                      "icon": "camera"
+                    },
+                    "k6gzl": {
+                      "content": "Postar"
+                    }
+                  }
+                },
+                {
+                  "id": "SS2N3",
+                  "type": "ref",
+                  "ref": "fQaFt",
+                  "name": "Nav · Perfil",
+                  "width": "fill_container",
+                  "descendants": {
+                    "vTDho": {
+                      "icon": "user"
+                    },
+                    "k6gzl": {
+                      "content": "Perfil"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "R7nkJH",
       "x": 0,
       "y": 0,
-      "name": "Frame",
+      "name": "Design System",
       "clip": true,
-      "width": 800,
-      "height": 600,
-      "fill": "#FFFFFF",
-      "layout": "none"
+      "width": 1240,
+      "fill": {
+        "type": "gradient",
+        "gradientType": "linear",
+        "enabled": true,
+        "rotation": 225,
+        "size": {
+          "height": 1
+        },
+        "colors": [
+          {
+            "color": "#F7FCF9",
+            "position": 0
+          },
+          {
+            "color": "#E4F2EA",
+            "position": 1
+          }
+        ]
+      },
+      "cornerRadius": 32,
+      "layout": "vertical",
+      "gap": 36,
+      "padding": [
+        48,
+        48,
+        56,
+        48
+      ],
+      "children": [
+        {
+          "type": "frame",
+          "id": "I5Z22",
+          "name": "Cabeçalho",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 6,
+          "children": [
+            {
+              "type": "text",
+              "id": "uexWi",
+              "name": "Título",
+              "fill": "$ink",
+              "content": "NaturaPost · Design System",
+              "fontFamily": "$font-display",
+              "fontSize": 22,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "gBZsR",
+              "name": "Subtítulo",
+              "fill": "$text-secondary",
+              "content": "Glass cards · estados de hover · movimento fluido",
+              "fontFamily": "$font-ui",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "MlhLt",
+          "name": "CARD · PRODUTO",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 14,
+          "children": [
+            {
+              "type": "text",
+              "id": "YBYh2",
+              "name": "Label",
+              "fill": "$text-muted",
+              "content": "CARD · PRODUTO",
+              "fontFamily": "$font-ui",
+              "fontSize": 11,
+              "fontWeight": "600",
+              "letterSpacing": 0.1
+            },
+            {
+              "type": "frame",
+              "id": "M880q",
+              "name": "Estados",
+              "width": "fill_container",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "wfl3y",
+                  "name": "Card/Produto",
+                  "reusable": true,
+                  "clip": true,
+                  "width": 260,
+                  "fill": "$glass",
+                  "cornerRadius": 20,
+                  "stroke": "$glass-stroke",
+                  "strokeWidth": 1,
+                  "effect": [
+                    {
+                      "type": "background_blur",
+                      "radius": 24
+                    },
+                    {
+                      "type": "shadow",
+                      "shadowType": "outer",
+                      "color": "#0B2E1E14",
+                      "offset": {
+                        "x": 0,
+                        "y": 8
+                      },
+                      "blur": 24
+                    }
+                  ],
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "cYK4S",
+                      "name": "Imagem",
+                      "width": "fill_container",
+                      "height": 156,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1603533626120-2d5704173332?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTA4Njc2OTF8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "cover"
+                      },
+                      "layout": "vertical",
+                      "padding": 10,
+                      "justifyContent": "space_between",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "M9GZZ",
+                          "name": "Badge",
+                          "fill": "$glass-strong",
+                          "cornerRadius": 999,
+                          "padding": [
+                            4,
+                            10
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "E7Jml0",
+                              "name": "Badge Texto",
+                              "fill": "$ink",
+                              "content": "Novo",
+                              "fontFamily": "$font-ui",
+                              "fontSize": 10,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "FNk3c",
+                          "x": 0,
+                          "y": 0,
+                          "name": "Ações",
+                          "enabled": false,
+                          "gap": 8,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "XmsVk",
+                              "name": "Ação heart",
+                              "fill": "$glass-strong",
+                              "cornerRadius": 999,
+                              "stroke": "$glass-stroke",
+                              "strokeWidth": 1,
+                              "padding": 7,
+                              "justifyContent": "center",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "icon",
+                                  "id": "fw7dP",
+                                  "name": "Icon",
+                                  "width": 15,
+                                  "height": 15,
+                                  "icon": "heart",
+                                  "library": "lucide",
+                                  "fill": "$ink"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "v5Srgr",
+                              "name": "Ação check",
+                              "fill": "$glass-strong",
+                              "cornerRadius": 999,
+                              "stroke": "$glass-stroke",
+                              "strokeWidth": 1,
+                              "padding": 7,
+                              "justifyContent": "center",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "icon",
+                                  "id": "m8oUS",
+                                  "name": "Icon",
+                                  "width": 15,
+                                  "height": 15,
+                                  "icon": "check",
+                                  "library": "lucide",
+                                  "fill": "$ink"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "MZ120",
+                      "name": "Corpo",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 10,
+                      "padding": [
+                        12,
+                        14,
+                        14,
+                        14
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "F0LEbV",
+                          "name": "Título",
+                          "fill": "$ink",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Sabonete Vegetal Lavanda",
+                          "lineHeight": 1.3,
+                          "fontFamily": "$font-ui",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "B5Cr1G",
+                          "name": "Meta",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "zoAOD",
+                              "name": "Preço",
+                              "fill": "$accent",
+                              "content": "R$ 32,90",
+                              "fontFamily": "$font-display",
+                              "fontSize": 15,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "CuGLF",
+                              "x": 0,
+                              "y": 0,
+                              "name": "Adicionar",
+                              "enabled": false,
+                              "fill": "$accent",
+                              "cornerRadius": 999,
+                              "effect": {
+                                "type": "shadow",
+                                "shadowType": "outer",
+                                "color": "#16A34A59",
+                                "offset": {
+                                  "x": 0,
+                                  "y": 6
+                                },
+                                "blur": 14
+                              },
+                              "gap": 6,
+                              "padding": [
+                                7,
+                                12
+                              ],
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "icon",
+                                  "id": "TFY7U",
+                                  "name": "Icon",
+                                  "width": 12,
+                                  "height": 12,
+                                  "icon": "plus",
+                                  "library": "lucide",
+                                  "fill": "#FFFFFF"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "F1Tot",
+                                  "name": "Label",
+                                  "fill": "#FFFFFF",
+                                  "content": "Adicionar",
+                                  "fontFamily": "$font-ui",
+                                  "fontSize": 11,
+                                  "fontWeight": "600"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "J9mGe",
+                  "type": "ref",
+                  "ref": "wfl3y",
+                  "name": "Card · Hover",
+                  "width": 260,
+                  "stroke": "$accent",
+                  "strokeWidth": 2,
+                  "effect": [
+                    {
+                      "type": "background_blur",
+                      "radius": 24
+                    },
+                    {
+                      "type": "shadow",
+                      "shadowType": "outer",
+                      "color": "#0D5C3329",
+                      "offset": {
+                        "x": 0,
+                        "y": 26
+                      },
+                      "blur": 52
+                    },
+                    {
+                      "type": "shadow",
+                      "shadowType": "outer",
+                      "color": "#0B2E1E1A",
+                      "offset": {
+                        "x": 0,
+                        "y": 6
+                      },
+                      "blur": 16
+                    }
+                  ],
+                  "descendants": {
+                    "cYK4S": {
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1708733145706-82da0d0596e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTA4Njc2OTF8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "cover"
+                      }
+                    },
+                    "E7Jml0": {
+                      "content": "Destaque"
+                    },
+                    "FNk3c": {
+                      "enabled": true
+                    },
+                    "F0LEbV": {
+                      "content": "Perfume Lumina Flora"
+                    },
+                    "zoAOD": {
+                      "content": "R$ 219,00"
+                    },
+                    "CuGLF": {
+                      "enabled": true
+                    }
+                  }
+                },
+                {
+                  "id": "k8i9Hq",
+                  "type": "ref",
+                  "ref": "wfl3y",
+                  "name": "Card · Inativo",
+                  "width": 260,
+                  "opacity": 0.6,
+                  "descendants": {
+                    "cYK4S": {
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1605585148189-e40fd347e329?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTA4Njc2OTF8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "cover"
+                      }
+                    },
+                    "M9GZZ": {
+                      "fill": "#F3F4F6"
+                    },
+                    "E7Jml0": {
+                      "content": "Inativo",
+                      "fill": "#6B7280"
+                    },
+                    "F0LEbV": {
+                      "content": "Kit Caderno Essencial"
+                    },
+                    "zoAOD": {
+                      "content": "R$ 89,90",
+                      "fill": "$text-muted"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "vj6q8",
+          "name": "CHIP · FILTRO",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 14,
+          "children": [
+            {
+              "type": "text",
+              "id": "l6hHDI",
+              "name": "Label",
+              "fill": "$text-muted",
+              "content": "CHIP · FILTRO",
+              "fontFamily": "$font-ui",
+              "fontSize": 11,
+              "fontWeight": "600",
+              "letterSpacing": 0.1
+            },
+            {
+              "type": "frame",
+              "id": "b9T2C",
+              "name": "Estados",
+              "width": "fill_container",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "zjUte",
+                  "name": "Chip",
+                  "reusable": true,
+                  "fill": "$glass",
+                  "cornerRadius": 999,
+                  "stroke": "$glass-stroke",
+                  "strokeWidth": 1,
+                  "effect": {
+                    "type": "background_blur",
+                    "radius": 24
+                  },
+                  "gap": 6,
+                  "padding": [
+                    8,
+                    14
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "GT6IM",
+                      "name": "Label",
+                      "fill": "$text-secondary",
+                      "content": "Todos",
+                      "fontFamily": "$font-ui",
+                      "fontSize": 12,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "id": "P6Eoq1",
+                  "type": "ref",
+                  "ref": "zjUte",
+                  "name": "Chip · Hover",
+                  "fill": "$glass-strong",
+                  "effect": [
+                    {
+                      "type": "background_blur",
+                      "radius": 24
+                    },
+                    {
+                      "type": "shadow",
+                      "shadowType": "outer",
+                      "color": "#0B2E1E1F",
+                      "offset": {
+                        "x": 0,
+                        "y": 6
+                      },
+                      "blur": 16
+                    }
+                  ],
+                  "descendants": {
+                    "GT6IM": {
+                      "fill": "$ink"
+                    }
+                  }
+                },
+                {
+                  "id": "lJuhr",
+                  "type": "ref",
+                  "ref": "zjUte",
+                  "name": "Chip · Ativo",
+                  "fill": "$accent",
+                  "stroke": "#16A34A",
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#16A34A4D",
+                    "offset": {
+                      "x": 0,
+                      "y": 8
+                    },
+                    "blur": 18
+                  },
+                  "descendants": {
+                    "GT6IM": {
+                      "fill": "#FFFFFF"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "tLEil",
+          "name": "NAV ITEM · BOTTOM BAR",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 14,
+          "children": [
+            {
+              "type": "text",
+              "id": "gLF84",
+              "name": "Label",
+              "fill": "$text-muted",
+              "content": "NAV ITEM · BOTTOM BAR",
+              "fontFamily": "$font-ui",
+              "fontSize": 11,
+              "fontWeight": "600",
+              "letterSpacing": 0.1
+            },
+            {
+              "type": "frame",
+              "id": "QBwjl",
+              "name": "Estados",
+              "width": "fill_container",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "fQaFt",
+                  "name": "Nav Item",
+                  "reusable": true,
+                  "width": 92,
+                  "cornerRadius": 16,
+                  "layout": "vertical",
+                  "gap": 5,
+                  "padding": [
+                    10,
+                    16
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "vTDho",
+                      "name": "Icon",
+                      "width": 20,
+                      "height": 20,
+                      "icon": "house",
+                      "library": "lucide",
+                      "fill": "$text-muted"
+                    },
+                    {
+                      "type": "text",
+                      "id": "k6gzl",
+                      "name": "Label",
+                      "fill": "$text-muted",
+                      "content": "Home",
+                      "fontFamily": "$font-ui",
+                      "fontSize": 10,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "id": "sLfla",
+                  "type": "ref",
+                  "ref": "fQaFt",
+                  "name": "Nav · Hover",
+                  "fill": "$glass-strong",
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#0B2E1E1A",
+                    "offset": {
+                      "x": 0,
+                      "y": 6
+                    },
+                    "blur": 14
+                  },
+                  "descendants": {
+                    "vTDho": {
+                      "fill": "$ink"
+                    },
+                    "k6gzl": {
+                      "fill": "$ink"
+                    }
+                  }
+                },
+                {
+                  "id": "FApjy",
+                  "type": "ref",
+                  "ref": "fQaFt",
+                  "name": "Nav · Ativo",
+                  "fill": "#16A34A1F",
+                  "descendants": {
+                    "vTDho": {
+                      "fill": "$accent"
+                    },
+                    "k6gzl": {
+                      "fill": "$accent"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "lAfBz",
+          "name": "BOTÃO · PRIMÁRIO",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 14,
+          "children": [
+            {
+              "type": "text",
+              "id": "ujoT3",
+              "name": "Label",
+              "fill": "$text-muted",
+              "content": "BOTÃO · PRIMÁRIO",
+              "fontFamily": "$font-ui",
+              "fontSize": 11,
+              "fontWeight": "600",
+              "letterSpacing": 0.1
+            },
+            {
+              "type": "frame",
+              "id": "Xnq8w",
+              "name": "Estados",
+              "width": "fill_container",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "KRLa8",
+                  "name": "Button/Primary",
+                  "reusable": true,
+                  "fill": "$accent",
+                  "cornerRadius": 14,
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#16A34A4D",
+                    "offset": {
+                      "x": 0,
+                      "y": 10
+                    },
+                    "blur": 22
+                  },
+                  "gap": 8,
+                  "padding": [
+                    13,
+                    20
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "n0Y8O",
+                      "name": "Label",
+                      "fill": "#FFFFFF",
+                      "content": "Publicar",
+                      "fontFamily": "$font-ui",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "id": "FakjI",
+                  "type": "ref",
+                  "ref": "KRLa8",
+                  "name": "Button · Hover",
+                  "fill": "$accent-bright",
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#22C55E73",
+                    "offset": {
+                      "x": 0,
+                      "y": 16
+                    },
+                    "blur": 30
+                  }
+                },
+                {
+                  "id": "OSFq9",
+                  "type": "ref",
+                  "ref": "KRLa8",
+                  "name": "Button · Glass",
+                  "fill": "$glass-strong",
+                  "stroke": "$glass-stroke",
+                  "strokeWidth": 1,
+                  "effect": [
+                    {
+                      "type": "background_blur",
+                      "radius": 24
+                    },
+                    {
+                      "type": "shadow",
+                      "shadowType": "outer",
+                      "color": "#0B2E1E1A",
+                      "offset": {
+                        "x": 0,
+                        "y": 8
+                      },
+                      "blur": 18
+                    }
+                  ],
+                  "descendants": {
+                    "n0Y8O": {
+                      "fill": "$ink"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "hPfdP",
+          "name": "Estados",
+          "width": "fill_container",
+          "gap": 20,
+          "children": [
+            {
+              "type": "frame",
+              "id": "kSzAE",
+              "name": "Search Bar",
+              "reusable": true,
+              "width": 340,
+              "fill": "$glass",
+              "cornerRadius": 14,
+              "stroke": "$glass-stroke",
+              "strokeWidth": 1,
+              "effect": {
+                "type": "background_blur",
+                "radius": 24
+              },
+              "gap": 10,
+              "padding": [
+                12,
+                16
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "Dw7zO",
+                  "name": "Ícone Lupa",
+                  "width": 17,
+                  "height": 17,
+                  "icon": "search",
+                  "library": "lucide",
+                  "fill": "$text-secondary"
+                },
+                {
+                  "type": "text",
+                  "id": "cBsaD",
+                  "name": "Placeholder",
+                  "fill": "$text-muted",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Buscar produto...",
+                  "fontFamily": "$font-ui",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "icon",
+                  "id": "ztyeW",
+                  "name": "Ícone Filtro",
+                  "width": 16,
+                  "height": 16,
+                  "icon": "sliders-horizontal",
+                  "library": "lucide",
+                  "fill": "$text-secondary"
+                }
+              ]
+            },
+            {
+              "id": "Xbg0S",
+              "type": "ref",
+              "ref": "kSzAE",
+              "name": "Search · Hover",
+              "fill": "$glass-strong",
+              "stroke": "$accent",
+              "strokeWidth": 1.5,
+              "effect": [
+                {
+                  "type": "background_blur",
+                  "radius": 24
+                },
+                {
+                  "type": "shadow",
+                  "shadowType": "outer",
+                  "color": "#16A34A26",
+                  "offset": {
+                    "x": 0,
+                    "y": 10
+                  },
+                  "blur": 24
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "jXxp8",
+      "x": 520,
+      "y": 877,
+      "name": "Home — Desktop",
+      "clip": true,
+      "width": 1440,
+      "height": 1024,
+      "fill": {
+        "type": "gradient",
+        "gradientType": "linear",
+        "enabled": true,
+        "rotation": 225,
+        "size": {
+          "height": 1
+        },
+        "colors": [
+          {
+            "color": "#F2FAF5",
+            "position": 0
+          },
+          {
+            "color": "#DCEFE4",
+            "position": 1
+          }
+        ]
+      },
+      "children": [
+        {
+          "type": "ellipse",
+          "id": "XVYxp",
+          "layoutPosition": "absolute",
+          "x": 980,
+          "y": -180,
+          "name": "Blob Verde",
+          "fill": {
+            "type": "gradient",
+            "gradientType": "radial",
+            "enabled": true,
+            "rotation": 0,
+            "size": {
+              "width": 1,
+              "height": 1
+            },
+            "colors": [
+              {
+                "color": "#16A34A40",
+                "position": 0
+              },
+              {
+                "color": "#16A34A00",
+                "position": 1
+              }
+            ]
+          },
+          "width": 520,
+          "height": 520,
+          "effect": {
+            "type": "blur",
+            "radius": 70
+          }
+        },
+        {
+          "type": "ellipse",
+          "id": "nDHce",
+          "layoutPosition": "absolute",
+          "x": -160,
+          "y": 700,
+          "name": "Blob Teal",
+          "fill": {
+            "type": "gradient",
+            "gradientType": "radial",
+            "enabled": true,
+            "rotation": 0,
+            "size": {
+              "width": 1,
+              "height": 1
+            },
+            "colors": [
+              {
+                "color": "#0D948838",
+                "position": 0
+              },
+              {
+                "color": "#0D948800",
+                "position": 1
+              }
+            ]
+          },
+          "width": 460,
+          "height": 460,
+          "effect": {
+            "type": "blur",
+            "radius": 70
+          }
+        },
+        {
+          "type": "frame",
+          "id": "QOq0j",
+          "layoutPosition": "absolute",
+          "x": 16,
+          "y": 16,
+          "name": "Rail Lateral",
+          "width": 72,
+          "height": 992,
+          "fill": "$glass-strong",
+          "cornerRadius": 28,
+          "stroke": "$glass-stroke",
+          "strokeWidth": 1,
+          "effect": [
+            {
+              "type": "background_blur",
+              "radius": 24
+            },
+            {
+              "type": "shadow",
+              "shadowType": "outer",
+              "color": "#0B2E1E1F",
+              "offset": {
+                "x": 0,
+                "y": 16
+              },
+              "blur": 40
+            }
+          ],
+          "layout": "vertical",
+          "padding": [
+            18,
+            0
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "Z63TV",
+              "name": "Logo",
+              "width": 44,
+              "height": 44,
+              "fill": {
+                "type": "gradient",
+                "gradientType": "linear",
+                "enabled": true,
+                "rotation": 225,
+                "size": {
+                  "height": 1
+                },
+                "colors": [
+                  {
+                    "color": "#16A34A",
+                    "position": 0
+                  },
+                  {
+                    "color": "#0D9488",
+                    "position": 1
+                  }
+                ]
+              },
+              "cornerRadius": 14,
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#16A34A59",
+                "offset": {
+                  "x": 0,
+                  "y": 8
+                },
+                "blur": 18
+              },
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "sVNo3",
+                  "name": "Marca",
+                  "fill": "#FFFFFF",
+                  "content": "N",
+                  "fontFamily": "$font-display",
+                  "fontSize": 18,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "tEd94",
+              "name": "Navegação",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 6,
+              "alignItems": "center",
+              "children": [
+                {
+                  "id": "R2cTWz",
+                  "type": "ref",
+                  "ref": "fQaFt",
+                  "name": "Rail · Home",
+                  "width": "fill_container",
+                  "fill": "#16A34A1F",
+                  "descendants": {
+                    "vTDho": {
+                      "icon": "house",
+                      "fill": "$accent"
+                    },
+                    "k6gzl": {
+                      "content": "Home",
+                      "fill": "$accent"
+                    }
+                  }
+                },
+                {
+                  "id": "cp6NW",
+                  "type": "ref",
+                  "ref": "fQaFt",
+                  "name": "Rail · Buscar",
+                  "width": "fill_container",
+                  "descendants": {
+                    "vTDho": {
+                      "icon": "search"
+                    },
+                    "k6gzl": {
+                      "content": "Buscar"
+                    }
+                  }
+                },
+                {
+                  "id": "ANkKV",
+                  "type": "ref",
+                  "ref": "fQaFt",
+                  "name": "Rail · Postar",
+                  "width": "fill_container",
+                  "descendants": {
+                    "vTDho": {
+                      "icon": "camera"
+                    },
+                    "k6gzl": {
+                      "content": "Postar"
+                    }
+                  }
+                },
+                {
+                  "id": "I3dIU",
+                  "type": "ref",
+                  "ref": "fQaFt",
+                  "name": "Rail · Perfil",
+                  "width": "fill_container",
+                  "descendants": {
+                    "vTDho": {
+                      "icon": "user"
+                    },
+                    "k6gzl": {
+                      "content": "Perfil"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "NqsMy",
+              "name": "Avatar",
+              "width": 40,
+              "height": 40,
+              "fill": {
+                "type": "gradient",
+                "gradientType": "linear",
+                "enabled": true,
+                "rotation": 225,
+                "size": {
+                  "height": 1
+                },
+                "colors": [
+                  {
+                    "color": "#16A34A",
+                    "position": 0
+                  },
+                  {
+                    "color": "#0D9488",
+                    "position": 1
+                  }
+                ]
+              },
+              "cornerRadius": 999,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "As1GJ",
+                  "name": "Inicial",
+                  "fill": "#FFFFFF",
+                  "content": "M",
+                  "fontFamily": "$font-display",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "w25nb",
+          "name": "Main",
+          "width": "fill_container",
+          "height": "fill_container",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            28,
+            40,
+            32,
+            112
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "xiPtU",
+              "name": "Topbar",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "PZIFB",
+                  "name": "Saudação",
+                  "layout": "vertical",
+                  "gap": 4,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "soDTT",
+                      "name": "Olá",
+                      "fill": "$text-muted",
+                      "content": "Bem-vindo de volta",
+                      "fontFamily": "$font-ui",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "c2rsaB",
+                      "name": "Nome",
+                      "fill": "$ink",
+                      "content": "Olá, Marllon",
+                      "fontFamily": "$font-ui",
+                      "fontSize": 22,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "yC7FI",
+                  "name": "Ações Topo",
+                  "gap": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "id": "S6kZTL",
+                      "type": "ref",
+                      "ref": "kSzAE",
+                      "name": "Search Bar",
+                      "width": 340
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Qvgk0",
+                      "name": "Notificações",
+                      "width": 44,
+                      "height": 44,
+                      "fill": "$glass",
+                      "cornerRadius": 999,
+                      "stroke": "$glass-stroke",
+                      "strokeWidth": 1,
+                      "effect": {
+                        "type": "background_blur",
+                        "radius": 24
+                      },
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "qDHh6",
+                          "name": "Icon",
+                          "width": 18,
+                          "height": 18,
+                          "icon": "bell",
+                          "library": "lucide",
+                          "fill": "$ink"
+                        },
+                        {
+                          "type": "ellipse",
+                          "id": "N4HnMd",
+                          "layoutPosition": "absolute",
+                          "x": 28,
+                          "y": 9,
+                          "name": "Badge",
+                          "fill": "$accent",
+                          "width": 9,
+                          "height": 9,
+                          "stroke": "#FFFFFF",
+                          "strokeWidth": 2
+                        }
+                      ]
+                    },
+                    {
+                      "id": "NzsXG",
+                      "type": "ref",
+                      "ref": "KRLa8",
+                      "name": "Novo Post",
+                      "descendants": {
+                        "n0Y8O": {
+                          "content": "Novo post"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "t5qCb",
+              "name": "Hero Row",
+              "width": "fill_container",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "x8uavZ",
+                  "name": "Hero",
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": 160,
+                  "fill": {
+                    "type": "gradient",
+                    "gradientType": "linear",
+                    "enabled": true,
+                    "rotation": 270,
+                    "size": {
+                      "height": 1
+                    },
+                    "colors": [
+                      {
+                        "color": "#16A34A",
+                        "position": 0
+                      },
+                      {
+                        "color": "#0D9488",
+                        "position": 1
+                      }
+                    ]
+                  },
+                  "cornerRadius": 24,
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#0D5C3333",
+                    "offset": {
+                      "x": 0,
+                      "y": 20
+                    },
+                    "blur": 44
+                  },
+                  "layout": "vertical",
+                  "gap": 6,
+                  "padding": [
+                    24,
+                    28
+                  ],
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "ellipse",
+                      "id": "guIpn",
+                      "layoutPosition": "absolute",
+                      "x": 520,
+                      "y": -60,
+                      "name": "Decor 1",
+                      "fill": "#FFFFFF1F",
+                      "width": 200,
+                      "height": 200
+                    },
+                    {
+                      "type": "ellipse",
+                      "id": "v0jxM8",
+                      "layoutPosition": "absolute",
+                      "x": 470,
+                      "y": 96,
+                      "name": "Decor 2",
+                      "fill": "#FFFFFF14",
+                      "width": 130,
+                      "height": 130
+                    },
+                    {
+                      "type": "text",
+                      "id": "psGh9",
+                      "name": "Eyebrow",
+                      "fill": "#FFFFFFCC",
+                      "content": "CAMPANHA DE VERÃO",
+                      "fontFamily": "$font-ui",
+                      "fontSize": 10,
+                      "fontWeight": "600",
+                      "letterSpacing": 0.12
+                    },
+                    {
+                      "type": "text",
+                      "id": "zO1rS",
+                      "name": "Título",
+                      "fill": "#FFFFFF",
+                      "textGrowth": "fixed-width",
+                      "width": 460,
+                      "content": "Seus produtos, prontos para o feed.",
+                      "lineHeight": 1.2,
+                      "fontFamily": "$font-ui",
+                      "fontSize": 22,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "v9h03",
+                      "name": "Sub",
+                      "fill": "#FFFFFFCC",
+                      "textGrowth": "fixed-width",
+                      "width": 460,
+                      "content": "Gere imagens em 1 clique e compartilhe com suas clientes.",
+                      "lineHeight": 1.4,
+                      "fontFamily": "$font-ui",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "JLSch",
+                  "name": "Stat · Produtos",
+                  "width": 190,
+                  "height": 160,
+                  "fill": "$glass",
+                  "cornerRadius": 24,
+                  "stroke": "$glass-stroke",
+                  "strokeWidth": 1,
+                  "effect": [
+                    {
+                      "type": "background_blur",
+                      "radius": 24
+                    },
+                    {
+                      "type": "shadow",
+                      "shadowType": "outer",
+                      "color": "#0B2E1E1A",
+                      "offset": {
+                        "x": 0,
+                        "y": 12
+                      },
+                      "blur": 28
+                    }
+                  ],
+                  "layout": "vertical",
+                  "padding": 20,
+                  "justifyContent": "space_between",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "r3QSj",
+                      "name": "Ícone",
+                      "width": 36,
+                      "height": 36,
+                      "fill": "#16A34A1F",
+                      "cornerRadius": 12,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "bPrv0",
+                          "name": "Icon",
+                          "width": 18,
+                          "height": 18,
+                          "icon": "package",
+                          "library": "lucide",
+                          "fill": "$accent"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "zk5Zw",
+                      "name": "Valor",
+                      "layout": "vertical",
+                      "gap": 3,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "duBwT",
+                          "name": "Número",
+                          "fill": "$ink",
+                          "content": "24",
+                          "fontFamily": "$font-display",
+                          "fontSize": 24,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "tUKMF",
+                          "name": "Legenda",
+                          "fill": "$text-muted",
+                          "content": "Produtos",
+                          "fontFamily": "$font-ui",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "h9c1H4",
+                  "name": "Stat · Repostagens",
+                  "width": 190,
+                  "height": 160,
+                  "fill": "$glass",
+                  "cornerRadius": 24,
+                  "stroke": "$glass-stroke",
+                  "strokeWidth": 1,
+                  "effect": [
+                    {
+                      "type": "background_blur",
+                      "radius": 24
+                    },
+                    {
+                      "type": "shadow",
+                      "shadowType": "outer",
+                      "color": "#0B2E1E1A",
+                      "offset": {
+                        "x": 0,
+                        "y": 12
+                      },
+                      "blur": 28
+                    }
+                  ],
+                  "layout": "vertical",
+                  "padding": 20,
+                  "justifyContent": "space_between",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "jTaxw",
+                      "name": "Ícone",
+                      "width": 36,
+                      "height": 36,
+                      "fill": "#16A34A1F",
+                      "cornerRadius": 12,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "f4sU2",
+                          "name": "Icon",
+                          "width": 18,
+                          "height": 18,
+                          "icon": "share-2",
+                          "library": "lucide",
+                          "fill": "$accent"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "e2Y4k5",
+                      "name": "Valor",
+                      "layout": "vertical",
+                      "gap": 3,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "yek54",
+                          "name": "Número",
+                          "fill": "$ink",
+                          "content": "128",
+                          "fontFamily": "$font-display",
+                          "fontSize": 24,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "fC9VJ",
+                          "name": "Legenda",
+                          "fill": "$text-muted",
+                          "content": "Repostagens",
+                          "fontFamily": "$font-ui",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "r2BmpM",
+                  "name": "Stat · Alcance semanal",
+                  "width": 190,
+                  "height": 160,
+                  "fill": "$glass",
+                  "cornerRadius": 24,
+                  "stroke": "$glass-stroke",
+                  "strokeWidth": 1,
+                  "effect": [
+                    {
+                      "type": "background_blur",
+                      "radius": 24
+                    },
+                    {
+                      "type": "shadow",
+                      "shadowType": "outer",
+                      "color": "#0B2E1E1A",
+                      "offset": {
+                        "x": 0,
+                        "y": 12
+                      },
+                      "blur": 28
+                    }
+                  ],
+                  "layout": "vertical",
+                  "padding": 20,
+                  "justifyContent": "space_between",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "wgIJv",
+                      "name": "Ícone",
+                      "width": 36,
+                      "height": 36,
+                      "fill": "#16A34A1F",
+                      "cornerRadius": 12,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "TW4Db",
+                          "name": "Icon",
+                          "width": 18,
+                          "height": 18,
+                          "icon": "trending-up",
+                          "library": "lucide",
+                          "fill": "$accent"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "FvQ2S",
+                      "name": "Valor",
+                      "layout": "vertical",
+                      "gap": 3,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "IIhXM",
+                          "name": "Número",
+                          "fill": "$ink",
+                          "content": "12,4k",
+                          "fontFamily": "$font-display",
+                          "fontSize": 24,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "a7vYMK",
+                          "name": "Legenda",
+                          "fill": "$text-muted",
+                          "content": "Alcance semanal",
+                          "fontFamily": "$font-ui",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "qsqzl",
+              "name": "Seção",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "b1F7hP",
+                  "name": "Título + Filtros",
+                  "gap": 16,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "X06cU",
+                      "name": "Título",
+                      "fill": "$ink",
+                      "content": "Meus produtos",
+                      "fontFamily": "$font-ui",
+                      "fontSize": 18,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "id": "V0JQe",
+                      "type": "ref",
+                      "ref": "zjUte",
+                      "name": "Chip · Todos",
+                      "fill": "$accent",
+                      "stroke": "#16A34A",
+                      "effect": {
+                        "type": "shadow",
+                        "shadowType": "outer",
+                        "color": "#16A34A4D",
+                        "offset": {
+                          "x": 0,
+                          "y": 8
+                        },
+                        "blur": 18
+                      },
+                      "descendants": {
+                        "GT6IM": {
+                          "fill": "#FFFFFF"
+                        }
+                      }
+                    },
+                    {
+                      "id": "rYSQH",
+                      "type": "ref",
+                      "ref": "zjUte",
+                      "name": "Chip · Skincare",
+                      "descendants": {
+                        "GT6IM": {
+                          "content": "Skincare"
+                        }
+                      }
+                    },
+                    {
+                      "id": "nz91P",
+                      "type": "ref",
+                      "ref": "zjUte",
+                      "name": "Chip · Perfumes",
+                      "descendants": {
+                        "GT6IM": {
+                          "content": "Perfumes"
+                        }
+                      }
+                    },
+                    {
+                      "id": "T0xHSZ",
+                      "type": "ref",
+                      "ref": "zjUte",
+                      "name": "Chip · Corpo",
+                      "descendants": {
+                        "GT6IM": {
+                          "content": "Corpo"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "LMwwz",
+                  "name": "Ordenar",
+                  "fill": "$glass",
+                  "cornerRadius": 12,
+                  "stroke": "$glass-stroke",
+                  "strokeWidth": 1,
+                  "effect": {
+                    "type": "background_blur",
+                    "radius": 24
+                  },
+                  "gap": 8,
+                  "padding": [
+                    10,
+                    14
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "knCha",
+                      "name": "Label",
+                      "fill": "$ink",
+                      "content": "Mais recentes",
+                      "fontFamily": "$font-ui",
+                      "fontSize": 12,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "icon",
+                      "id": "fVUEn",
+                      "name": "Icon",
+                      "width": 14,
+                      "height": 14,
+                      "icon": "chevron-down",
+                      "library": "lucide",
+                      "fill": "$text-secondary"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "eWmgs",
+              "name": "Linha 1",
+              "width": "fill_container",
+              "gap": 20,
+              "children": [
+                {
+                  "id": "YTXzr",
+                  "type": "ref",
+                  "ref": "wfl3y",
+                  "name": "Card · Sabonete Vegetal Lavanda",
+                  "width": "fill_container",
+                  "descendants": {
+                    "cYK4S": {
+                      "height": 210,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1603533626120-2d5704173332?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTA4Njc2OTF8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "cover"
+                      }
+                    },
+                    "F0LEbV": {
+                      "content": "Sabonete Vegetal Lavanda"
+                    },
+                    "zoAOD": {
+                      "content": "R$ 32,90"
+                    }
+                  }
+                },
+                {
+                  "id": "jBNqz",
+                  "type": "ref",
+                  "ref": "wfl3y",
+                  "name": "Card · Creme Corporal Ekos",
+                  "width": "fill_container",
+                  "descendants": {
+                    "cYK4S": {
+                      "height": 210,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1643747238009-6863ea63e78d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTA4Njc2OTF8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "cover"
+                      }
+                    },
+                    "E7Jml0": {
+                      "content": "Oferta"
+                    },
+                    "FNk3c": {
+                      "enabled": true
+                    },
+                    "F0LEbV": {
+                      "content": "Creme Corporal Ekos"
+                    },
+                    "zoAOD": {
+                      "content": "R$ 89,90"
+                    },
+                    "CuGLF": {
+                      "enabled": true
+                    }
+                  }
+                },
+                {
+                  "id": "NRcqT",
+                  "type": "ref",
+                  "ref": "wfl3y",
+                  "name": "Card · Perfume Lumina Flora",
+                  "width": "fill_container",
+                  "descendants": {
+                    "cYK4S": {
+                      "height": 210,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1708733145706-82da0d0596e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTA4Njc2OTF8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "cover"
+                      }
+                    },
+                    "E7Jml0": {
+                      "content": "Destaque"
+                    },
+                    "F0LEbV": {
+                      "content": "Perfume Lumina Flora"
+                    },
+                    "zoAOD": {
+                      "content": "R$ 219,00"
+                    }
+                  }
+                },
+                {
+                  "id": "K28608",
+                  "type": "ref",
+                  "ref": "wfl3y",
+                  "name": "Card · Óleo Essencial Calm",
+                  "width": "fill_container",
+                  "descendants": {
+                    "cYK4S": {
+                      "height": 210,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1564277287253-934c868e54ea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTA4Njc2OTF8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "cover"
+                      }
+                    },
+                    "M9GZZ": {
+                      "enabled": false
+                    },
+                    "F0LEbV": {
+                      "content": "Óleo Essencial Calm"
+                    },
+                    "zoAOD": {
+                      "content": "R$ 54,90"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "BbeWW",
+              "name": "Linha 2",
+              "width": "fill_container",
+              "gap": 20,
+              "children": [
+                {
+                  "id": "PVHyM",
+                  "type": "ref",
+                  "ref": "wfl3y",
+                  "name": "Card · Hidratante Extreme",
+                  "width": "fill_container",
+                  "descendants": {
+                    "cYK4S": {
+                      "height": 210,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1748543669178-efd3de4e64e0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTA4Njc2OTF8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "cover"
+                      }
+                    },
+                    "M9GZZ": {
+                      "enabled": false
+                    },
+                    "F0LEbV": {
+                      "content": "Hidratante Extreme"
+                    },
+                    "zoAOD": {
+                      "content": "R$ 79,90"
+                    }
+                  }
+                },
+                {
+                  "id": "zfxiw",
+                  "type": "ref",
+                  "ref": "wfl3y",
+                  "name": "Card · Sérum Vitamina C",
+                  "width": "fill_container",
+                  "descendants": {
+                    "cYK4S": {
+                      "height": 210,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1599022484226-2cd40d53a027?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTA4Njc2OTF8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "cover"
+                      }
+                    },
+                    "F0LEbV": {
+                      "content": "Sérum Vitamina C"
+                    },
+                    "zoAOD": {
+                      "content": "R$ 129,00"
+                    }
+                  }
+                },
+                {
+                  "id": "E3JXQ6",
+                  "type": "ref",
+                  "ref": "wfl3y",
+                  "name": "Card · Esfoliante Corporal",
+                  "width": "fill_container",
+                  "descendants": {
+                    "cYK4S": {
+                      "height": 210,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1744309694999-69394db64dda?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTA4Njc2OTF8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "cover"
+                      }
+                    },
+                    "M9GZZ": {
+                      "enabled": false
+                    },
+                    "F0LEbV": {
+                      "content": "Esfoliante Corporal"
+                    },
+                    "zoAOD": {
+                      "content": "R$ 64,90"
+                    }
+                  }
+                },
+                {
+                  "id": "Z5cQj9",
+                  "type": "ref",
+                  "ref": "wfl3y",
+                  "name": "Card · Vela Aromática",
+                  "width": "fill_container",
+                  "descendants": {
+                    "cYK4S": {
+                      "height": 210,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1605585148189-e40fd347e329?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTA4Njc2OTF8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "cover"
+                      }
+                    },
+                    "M9GZZ": {
+                      "enabled": false
+                    },
+                    "F0LEbV": {
+                      "content": "Vela Aromática"
+                    },
+                    "zoAOD": {
+                      "content": "R$ 48,90"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "aRGDv",
+      "x": 0,
+      "y": 1764,
+      "name": "Login",
+      "clip": true,
+      "width": 390,
+      "height": 844,
+      "fill": {
+        "type": "gradient",
+        "gradientType": "linear",
+        "enabled": true,
+        "rotation": 225,
+        "size": {
+          "height": 1
+        },
+        "colors": [
+          {
+            "color": "#F2FAF5",
+            "position": 0
+          },
+          {
+            "color": "#D6EDE1",
+            "position": 1
+          }
+        ]
+      },
+      "layout": "vertical",
+      "padding": 24,
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "ellipse",
+          "id": "erzDe",
+          "layoutPosition": "absolute",
+          "x": -140,
+          "y": -120,
+          "name": "Blob Verde",
+          "fill": {
+            "type": "gradient",
+            "gradientType": "radial",
+            "enabled": true,
+            "rotation": 0,
+            "size": {
+              "width": 1,
+              "height": 1
+            },
+            "colors": [
+              {
+                "color": "#16A34A59",
+                "position": 0
+              },
+              {
+                "color": "#16A34A00",
+                "position": 1
+              }
+            ]
+          },
+          "width": 420,
+          "height": 420,
+          "effect": {
+            "type": "blur",
+            "radius": 60
+          }
+        },
+        {
+          "type": "ellipse",
+          "id": "xK4rv",
+          "layoutPosition": "absolute",
+          "x": 180,
+          "y": 560,
+          "name": "Blob Teal",
+          "fill": {
+            "type": "gradient",
+            "gradientType": "radial",
+            "enabled": true,
+            "rotation": 0,
+            "size": {
+              "width": 1,
+              "height": 1
+            },
+            "colors": [
+              {
+                "color": "#0D94884D",
+                "position": 0
+              },
+              {
+                "color": "#0D948800",
+                "position": 1
+              }
+            ]
+          },
+          "width": 420,
+          "height": 420,
+          "effect": {
+            "type": "blur",
+            "radius": 60
+          }
+        },
+        {
+          "type": "ellipse",
+          "id": "zQEG6",
+          "layoutPosition": "absolute",
+          "x": -120,
+          "y": 520,
+          "name": "Blob Lime",
+          "fill": {
+            "type": "gradient",
+            "gradientType": "radial",
+            "enabled": true,
+            "rotation": 0,
+            "size": {
+              "width": 1,
+              "height": 1
+            },
+            "colors": [
+              {
+                "color": "#A3E63540",
+                "position": 0
+              },
+              {
+                "color": "#A3E63500",
+                "position": 1
+              }
+            ]
+          },
+          "width": 340,
+          "height": 340,
+          "effect": {
+            "type": "blur",
+            "radius": 60
+          }
+        },
+        {
+          "type": "frame",
+          "id": "hqRpX",
+          "name": "Glass Card",
+          "width": "fill_container",
+          "fill": "$glass-strong",
+          "cornerRadius": 28,
+          "stroke": "$glass-stroke",
+          "strokeWidth": 1,
+          "effect": [
+            {
+              "type": "background_blur",
+              "radius": 32
+            },
+            {
+              "type": "shadow",
+              "shadowType": "outer",
+              "color": "#0B2E1E29",
+              "offset": {
+                "x": 0,
+                "y": 24
+              },
+              "blur": 60
+            }
+          ],
+          "layout": "vertical",
+          "gap": 20,
+          "padding": [
+            32,
+            24,
+            28,
+            24
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "eqpMY",
+              "name": "Marca",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 14,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "PaF42",
+                  "name": "Logo",
+                  "width": 64,
+                  "height": 64,
+                  "fill": {
+                    "type": "gradient",
+                    "gradientType": "linear",
+                    "enabled": true,
+                    "rotation": 225,
+                    "size": {
+                      "height": 1
+                    },
+                    "colors": [
+                      {
+                        "color": "#16A34A",
+                        "position": 0
+                      },
+                      {
+                        "color": "#0D9488",
+                        "position": 1
+                      }
+                    ]
+                  },
+                  "cornerRadius": 20,
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#16A34A66",
+                    "offset": {
+                      "x": 0,
+                      "y": 12
+                    },
+                    "blur": 28
+                  },
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "oW3Wf",
+                      "name": "Marca",
+                      "fill": "#FFFFFF",
+                      "content": "N",
+                      "fontFamily": "$font-display",
+                      "fontSize": 26,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "J7migi",
+                  "name": "Títulos",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 5,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "IFuUB",
+                      "name": "Título",
+                      "fill": "$ink",
+                      "content": "NaturaPost",
+                      "fontFamily": "$font-display",
+                      "fontSize": 20,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "zJ0rF",
+                      "name": "Subtítulo",
+                      "fill": "$text-secondary",
+                      "content": "Publique, compartilhe e venda mais.",
+                      "textAlign": "center",
+                      "fontFamily": "$font-ui",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "KgPYM",
+              "name": "Formulário",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "mSPd7",
+                  "name": "Campo · E-mail",
+                  "width": "fill_container",
+                  "fill": "#FFFFFFE6",
+                  "cornerRadius": 14,
+                  "stroke": "$accent",
+                  "strokeWidth": 1.5,
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#16A34A29",
+                    "offset": {
+                      "x": 0,
+                      "y": 8
+                    },
+                    "blur": 20
+                  },
+                  "gap": 10,
+                  "padding": [
+                    13,
+                    14
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "NT1iE",
+                      "name": "Icon",
+                      "width": 16,
+                      "height": 16,
+                      "icon": "mail",
+                      "library": "lucide",
+                      "fill": "$accent"
+                    },
+                    {
+                      "type": "text",
+                      "id": "F2Hw3j",
+                      "name": "Valor",
+                      "fill": "$text-muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "E-mail",
+                      "fontFamily": "$font-ui",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "cDzpB",
+                  "name": "Campo · Senha",
+                  "width": "fill_container",
+                  "fill": "#FFFFFFE6",
+                  "cornerRadius": 14,
+                  "stroke": "$glass-stroke",
+                  "strokeWidth": 1,
+                  "gap": 10,
+                  "padding": [
+                    13,
+                    14
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "mWup7",
+                      "name": "Icon",
+                      "width": 16,
+                      "height": 16,
+                      "icon": "lock",
+                      "library": "lucide",
+                      "fill": "$text-secondary"
+                    },
+                    {
+                      "type": "text",
+                      "id": "ob7D5",
+                      "name": "Valor",
+                      "fill": "$text-muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Senha",
+                      "fontFamily": "$font-ui",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "icon",
+                      "id": "QG8Gc",
+                      "name": "Trail",
+                      "width": 16,
+                      "height": 16,
+                      "icon": "eye",
+                      "library": "lucide",
+                      "fill": "$text-muted"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "E9Hl5F",
+              "name": "Opções",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "pugui",
+                  "name": "Lembrar",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "z6LmLx",
+                      "name": "Checkbox",
+                      "width": 18,
+                      "height": 18,
+                      "fill": "$accent",
+                      "cornerRadius": 6,
+                      "justifyContent": "center",
+                      "alignItems": "center"
+                    },
+                    {
+                      "type": "icon",
+                      "id": "BBxQS",
+                      "name": "Check",
+                      "width": 12,
+                      "height": 12,
+                      "icon": "check",
+                      "library": "lucide",
+                      "fill": "#FFFFFF"
+                    },
+                    {
+                      "type": "text",
+                      "id": "B2PhfZ",
+                      "name": "Label",
+                      "fill": "$text-secondary",
+                      "content": "Lembrar de mim",
+                      "fontFamily": "$font-ui",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "LwJ0J",
+                  "name": "Esqueci",
+                  "fill": "$accent",
+                  "content": "Esqueci a senha",
+                  "fontFamily": "$font-ui",
+                  "fontSize": 12,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "id": "Fa5TH",
+              "type": "ref",
+              "ref": "KRLa8",
+              "name": "Entrar",
+              "width": "fill_container",
+              "descendants": {
+                "n0Y8O": {
+                  "content": "Entrar"
+                }
+              }
+            },
+            {
+              "type": "frame",
+              "id": "JNkPc",
+              "name": "Cadastro",
+              "width": "fill_container",
+              "gap": 6,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "C2z64C",
+                  "name": "Texto",
+                  "fill": "$text-secondary",
+                  "content": "Não tem uma conta?",
+                  "fontFamily": "$font-ui",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "YLPj0",
+                  "name": "Link",
+                  "fill": "$accent",
+                  "content": "Cadastre-se",
+                  "fontFamily": "$font-ui",
+                  "fontSize": 13,
+                  "fontWeight": "700"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "T8m5VE",
+          "name": "Rodapé",
+          "fill": "$text-muted",
+          "textGrowth": "fixed-width",
+          "width": 300,
+          "content": "Ao continuar você aceita os Termos e a Política de Privacidade.",
+          "textAlign": "center",
+          "fontFamily": "$font-ui",
+          "fontSize": 11,
+          "fontWeight": "normal"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "iPyYu",
+      "x": -36,
+      "y": 785,
+      "name": "BARRA DE BUSCA",
+      "width": "fill_container(1144)",
+      "height": "fit_content(13)",
+      "layout": "vertical",
+      "gap": 14
+    },
+    {
+      "type": "text",
+      "id": "A1egx",
+      "x": -200,
+      "y": 805,
+      "name": "Label",
+      "fill": "$text-muted",
+      "content": "BARRA DE BUSCA",
+      "fontFamily": "$font-ui",
+      "fontSize": 11,
+      "fontWeight": "600",
+      "letterSpacing": 0.1
     }
   ],
+  "variables": {
+    "accent": {
+      "type": "color",
+      "value": "#16A34A"
+    },
+    "accent-bright": {
+      "type": "color",
+      "value": "#22C55E"
+    },
+    "accent-teal": {
+      "type": "color",
+      "value": "#0D9488"
+    },
+    "accent-soft": {
+      "type": "color",
+      "value": "#DCFCE7"
+    },
+    "bg": {
+      "type": "color",
+      "value": "#EAF4EE"
+    },
+    "glass": {
+      "type": "color",
+      "value": "#FFFFFF8C"
+    },
+    "glass-strong": {
+      "type": "color",
+      "value": "#FFFFFFCC"
+    },
+    "glass-stroke": {
+      "type": "color",
+      "value": "#FFFFFFB3"
+    },
+    "ink": {
+      "type": "color",
+      "value": "#0B2018"
+    },
+    "text-secondary": {
+      "type": "color",
+      "value": "#48604F"
+    },
+    "text-muted": {
+      "type": "color",
+      "value": "#8A9A91"
+    },
+    "font-ui": {
+      "type": "string",
+      "value": "Inter"
+    },
+    "font-display": {
+      "type": "string",
+      "value": "Audiowide"
+    },
+    "radius": {
+      "type": "number",
+      "value": 20
+    },
+    "blur-glass": {
+      "type": "number",
+      "value": 24
+    }
+  },
   "fileToken": "97366ce0-f07c-416d-9149-68f8008e9c14"
 }

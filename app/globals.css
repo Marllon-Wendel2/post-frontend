@@ -302,7 +302,7 @@ ion-button.button-solid.ion-color-success.button-disabled:not(.btn-primary) {
 }
 
 /* ============================================================ */
-/* Push content right on desktop when sidebar is visible         */
+/* Wrappers de página                                            */
 /* ============================================================ */
 /* Os wrappers de página precisam de altura definida para que     */
 /* ion-content (height: 100%) encontre um tamanho resolvível.     */
@@ -313,11 +313,28 @@ ion-button.button-solid.ion-color-success.button-disabled:not(.btn-primary) {
   height: 100%;
 }
 
-@media (min-width: 768px) {
-  .page-home ion-content,
-  .page-post ion-content,
-  .page-profile ion-content,
-  .page-search ion-content {
-    --padding-start: 104px;
+/* ============================================================ */
+/* Telas pequenas (< 360x550) — componentes reduzidos            */
+/* ============================================================ */
+
+@media (max-width: 359px), (max-height: 549px) {
+  .search-shell {
+    border-radius: 12px;
+    padding: 1px;
+  }
+
+  .search-shell ion-searchbar {
+    --border-radius: 10px;
+    font-size: 14px;
+  }
+
+  .btn-primary {
+    min-height: 44px;
+    font-size: 14px;
+    --border-radius: 12px;
+  }
+
+  .btn-icon {
+    font-size: 18px;
   }
 }

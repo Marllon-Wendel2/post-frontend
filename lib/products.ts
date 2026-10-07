@@ -53,6 +53,7 @@ export async function generateSocialImages(
       title: p.title,
       price: p.price,
       imageUrl: p.imageUrl,
+      productId: p.id,
     })),
   };
   const response = await api.post<SocialImageResponseDto>(

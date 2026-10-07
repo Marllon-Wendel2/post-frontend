@@ -95,6 +95,7 @@ export interface SocialImageRequestDto {
     title: string;
     price: number;
     imageUrl: string;
+    productId: string;
   }>;
 }
 

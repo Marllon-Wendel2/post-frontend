@@ -140,3 +140,48 @@
     font-size: 15px;
   }
 }
+
+/* ============================================================ */
+/* Telas pequenas (< 360x550) — modal compacto                    */
+/* ============================================================ */
+
+@media (max-width: 359px), (max-height: 549px) {
+  .item-image {
+    width: 44px;
+    height: 44px;
+    margin-right: 8px;
+  }
+
+  .item-title {
+    font-size: 12px;
+  }
+
+  .price-input {
+    width: 84px;
+    min-height: 28px;
+    font-size: 13px;
+  }
+
+  .modal-buttons {
+    padding: 10px 12px;
+    padding-bottom: calc(10px + env(safe-area-inset-bottom));
+    gap: 6px;
+  }
+
+  .result-container {
+    padding: 12px;
+  }
+
+  .result-title {
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+
+  .result-item {
+    margin-bottom: 12px;
+  }
+
+  .result-text {
+    font-size: 13px;
+  }
+}

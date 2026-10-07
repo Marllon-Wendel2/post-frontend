@@ -107,7 +107,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 14px;
-  padding: 14px 16px 110px;
+  padding: 14px 16px 96px;
 }
 
 /* ============================================================ */
@@ -116,7 +116,7 @@
 
 .fab-container {
   position: fixed;
-  bottom: calc(90px + env(safe-area-inset-bottom));
+  bottom: calc(24px + env(safe-area-inset-bottom));
   left: 50%;
   transform: translateX(-50%);
   z-index: 90;
@@ -178,7 +178,7 @@
   .product-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 18px;
-    padding: 16px 24px 48px;
+    padding: 16px 24px 88px;
     max-width: 900px;
     margin: 0 auto;
   }
@@ -223,6 +223,74 @@
   .product-grid {
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    padding: 18px 32px 56px;
+    padding: 18px 32px 96px;
+  }
+}
+
+/* ============================================================ */
+/* Telas pequenas (< 360x550) — componentes reduzidos             */
+/* ============================================================ */
+
+@media (max-width: 359px), (max-height: 549px) {
+  .header {
+    gap: 8px;
+    padding: 10px 10px 2px;
+  }
+
+  .avatar {
+    width: 34px;
+    height: 34px;
+    font-size: 14px;
+  }
+
+  .greeting-hi {
+    font-size: 10px;
+  }
+
+  .greeting-name {
+    font-size: 15px;
+  }
+
+  .search-row {
+    padding: 8px 10px 0;
+  }
+
+  .section-header {
+    padding: 12px 10px 0;
+  }
+
+  .section-title {
+    font-size: 15px;
+  }
+
+  .section-count {
+    font-size: 11px;
+  }
+
+  .product-grid {
+    gap: 8px;
+    padding: 10px 10px 84px;
+  }
+
+  .empty-state {
+    padding: 28px 16px;
+  }
+
+  .empty-icon {
+    font-size: 36px;
+    margin-bottom: 8px;
+  }
+
+  .empty-state p {
+    font-size: 13px;
+  }
+
+  .fab-container {
+    bottom: calc(12px + env(safe-area-inset-bottom));
+  }
+
+  .fab-button {
+    height: 40px;
+    font-size: 13px;
   }
 }
