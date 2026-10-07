@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Button, Input, Modal, List, Typography, Space, Spin, type ButtonProps, type InputProps, type ModalProps, type InputRef } from 'antd';
+import { Button, Input, Modal, Typography, Space, Spin, type ButtonProps, type InputProps, type ModalProps, type InputRef } from 'antd';
 
 const { Text } = Typography;
 
@@ -208,18 +208,14 @@ interface IonListProps {
 
 export const IonList = ({ children, className, lines, ...rest }: IonListProps) => {
   const bordered = lines !== 'none';
-  
+  const classNames = [className, 'np-list', bordered && 'np-list-bordered']
+    .filter(Boolean)
+    .join(' ');
+
   return (
-    <List
-      className={className}
-      bordered={bordered}
-      itemLayout="horizontal"
-      dataSource={[]}
-      renderItem={() => null}
-      {...rest}
-    >
+    <div className={classNames} {...rest}>
       {children}
-    </List>
+    </div>
   );
 };
 

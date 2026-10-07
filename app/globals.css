@@ -154,6 +154,18 @@ ion-modal ion-content {
   font-family: var(--np-font-display);
 }
 
+/* Container de lista (substituto do List do antd, deprecated em 6.6)
+   Espelha o visual gerado pelo tema: borda colorBorder, radius LG, 14px */
+.np-list {
+  position: relative;
+  font-size: 14px;
+}
+
+.np-list-bordered {
+  border: 1px solid #c7cbc8;
+  border-radius: 14px;
+}
+
 /* ============================================================ */
 /* BARRA DE BUSCA (glass)                                        */
 /* ============================================================ */
