@@ -36,45 +36,66 @@
 }
 
 :root {
+  /* CALM / SYSTEM — identidade */
+  --np-forest: #0f5132;
+  --np-mint: #b7d9c1;
+  --np-ivory: #faf9f4;
+  --np-stone: #d6d3c8;
+
+  /* Tokens semânticos */
+  --np-background: #f1eee7;
+  --np-surface: #faf8f3;
+  --np-surface-muted: #edeae3;
+  --np-border: #e7e3da;
+  --np-track: #e2dfd8;
+  --np-border-hover: rgba(15, 81, 50, 0.22);
+
   /* Cores */
-  --np-accent: #16a34a;
-  --np-accent-bright: #22c55e;
-  --np-accent-teal: #0d9488;
-  --np-accent-soft: rgba(22, 163, 74, 0.12);
-  --np-ink: #0b2018;
-  --np-text-secondary: #48604f;
-  --np-text-muted: #8a9a91;
+  --np-accent: #0f5132;
+  --np-accent-bright: #1a6b45;
+  --np-accent-teal: #1a6b45;
+  --np-accent-soft: rgba(15, 81, 50, 0.12);
+  --np-ink: #242b27;
+  --np-text-secondary: #6e746c;
+  --np-text-muted: #898983;
   --np-danger: #ef4444;
 
-  /* Glass */
-  --np-glass: rgba(255, 255, 255, 0.55);
-  --np-glass-strong: rgba(255, 255, 255, 0.8);
-  --np-glass-line: rgba(255, 255, 255, 0.75);
-  --np-blur: 24px;
+  /* Superfícies (alias das superfícies do app) */
+  --np-glass: var(--np-surface);
+  --np-glass-strong: var(--np-ivory);
+  --np-glass-line: var(--np-border);
+  --np-blur: 0px;
 
-  /* Sombras */
-  --np-shadow-card: 0 8px 24px rgba(11, 46, 30, 0.08);
-  --np-shadow-hover: 0 26px 52px rgba(13, 92, 51, 0.18), 0 6px 16px rgba(11, 46, 30, 0.1);
-  --np-shadow-glow: 0 12px 26px rgba(22, 163, 74, 0.35);
+  /* Sombras difusas e delicadas */
+  --np-shadow-control: 0 4px 8px rgba(51, 48, 39, 0.1);
+  --np-shadow-card:
+    0 8px 18px rgba(51, 48, 39, 0.12),
+    0 2px 5px rgba(51, 48, 39, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  --np-shadow-hover:
+    0 12px 28px rgba(51, 48, 39, 0.14),
+    0 3px 8px rgba(51, 48, 39, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  --np-shadow-glow: 0 6px 16px rgba(51, 48, 39, 0.12);
 
   /* Tipografia */
   --np-font-ui: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --np-font-display: var(--font-audiowide), ui-sans-serif, cursive;
+  --np-font-display: var(--font-cormorant), Georgia, 'Times New Roman', serif;
 
   /* Ionic */
   --ion-font-family: var(--np-font-ui);
-  --ion-color-success: #16a34a;
-  --ion-color-success-rgb: 22, 163, 74;
+  --ion-color-success: #0f5132;
+  --ion-color-success-rgb: 15, 81, 50;
   --ion-color-success-contrast: #ffffff;
   --ion-color-success-contrast-rgb: 255, 255, 255;
-  --ion-color-success-shade: #12813d;
-  --ion-color-success-tint: #2db25b;
-  --ion-color-medium: #8a9a91;
-  --ion-color-medium-rgb: 138, 154, 145;
+  --ion-color-success-shade: #0a3a24;
+  --ion-color-success-tint: #2a7a55;
+  --ion-color-medium: #898983;
+  --ion-color-medium-rgb: 137, 137, 131;
   --ion-color-medium-contrast: #ffffff;
   --ion-color-medium-contrast-rgb: 255, 255, 255;
-  --ion-color-medium-shade: #78877f;
-  --ion-color-medium-tint: #96a69d;
+  --ion-color-medium-shade: #787873;
+  --ion-color-medium-tint: #9b9b96;
   --ion-color-danger: #ef4444;
   --ion-color-danger-rgb: 239, 68, 68;
   --ion-color-danger-contrast: #ffffff;
@@ -88,13 +109,13 @@ html {
   --ion-font-family: var(--np-font-ui);
   height: 100dvh;
   color-scheme: light;
-  background-color: #eaf4ee;
+  background-color: #f1eee7;
   background-image:
-    radial-gradient(420px 420px at 6% 4%, rgba(22, 163, 74, 0.16), transparent 70%),
-    radial-gradient(480px 480px at 94% 16%, rgba(13, 148, 136, 0.14), transparent 70%),
-    radial-gradient(420px 420px at 12% 88%, rgba(163, 230, 53, 0.15), transparent 70%),
-    radial-gradient(520px 520px at 88% 92%, rgba(22, 163, 74, 0.12), transparent 70%),
-    linear-gradient(225deg, #f2faf5 0%, #dcefe4 100%);
+    radial-gradient(420px 420px at 6% 4%, rgba(183, 217, 193, 0.55), transparent 70%),
+    radial-gradient(480px 480px at 94% 16%, rgba(15, 81, 50, 0.08), transparent 70%),
+    radial-gradient(420px 420px at 12% 88%, rgba(214, 211, 200, 0.5), transparent 70%),
+    radial-gradient(520px 520px at 88% 92%, rgba(183, 217, 193, 0.4), transparent 70%),
+    linear-gradient(225deg, #faf9f4 0%, #f1eee7 100%);
   background-attachment: fixed;
 }
 
@@ -127,7 +148,7 @@ ion-content {
 }
 
 ion-modal ion-content {
-  --background: rgba(255, 255, 255, 0.94);
+  --background: var(--np-ivory);
 }
 
 /* ============================================================ */
@@ -137,16 +158,12 @@ ion-modal ion-content {
 .glass {
   background: var(--np-glass);
   border: 1px solid var(--np-glass-line);
-  backdrop-filter: blur(var(--np-blur)) saturate(150%);
-  -webkit-backdrop-filter: blur(var(--np-blur)) saturate(150%);
   box-shadow: var(--np-shadow-card);
 }
 
 .glass-strong {
   background: var(--np-glass-strong);
   border: 1px solid var(--np-glass-line);
-  backdrop-filter: blur(var(--np-blur)) saturate(150%);
-  -webkit-backdrop-filter: blur(var(--np-blur)) saturate(150%);
   box-shadow: var(--np-shadow-card);
 }
 
@@ -162,21 +179,19 @@ ion-modal ion-content {
 }
 
 .np-list-bordered {
-  border: 1px solid #c7cbc8;
+  border: 1px solid #e7e3da;
   border-radius: 14px;
 }
 
 /* ============================================================ */
-/* BARRA DE BUSCA (glass)                                        */
+/* BARRA DE BUSCA (CALM — input em cápsula)                      */
 /* ============================================================ */
 
 .search-shell {
-  background: var(--np-glass-strong);
-  border: 1px solid var(--np-glass-line);
-  border-radius: 16px;
-  backdrop-filter: blur(var(--np-blur)) saturate(150%);
-  -webkit-backdrop-filter: blur(var(--np-blur)) saturate(150%);
-  box-shadow: 0 8px 20px rgba(11, 46, 30, 0.07);
+  background: var(--np-surface-muted);
+  border: 1px solid var(--np-border);
+  border-radius: 999px;
+  box-shadow: var(--np-shadow-control);
   padding: 2px;
   transition:
     box-shadow 0.2s ease,
@@ -184,17 +199,17 @@ ion-modal ion-content {
 }
 
 .search-shell:focus-within {
-  border-color: rgba(22, 163, 74, 0.55);
+  border-color: rgba(15, 81, 50, 0.55);
   box-shadow:
-    0 0 0 3px rgba(22, 163, 74, 0.15),
-    0 12px 26px rgba(11, 46, 30, 0.1);
+    0 0 0 3px rgba(15, 81, 50, 0.15),
+    var(--np-shadow-control);
 }
 
 .search-shell ion-searchbar {
   --background: transparent;
   --background-focused: transparent;
   --box-shadow: none;
-  --border-radius: 14px;
+  --border-radius: 999px;
   --placeholder-color: var(--np-text-muted);
   --icon-color: var(--np-text-secondary);
   --color: var(--np-ink);
@@ -210,63 +225,62 @@ ion-modal ion-content {
 /* ============================================================ */
 
 .btn-primary {
-  --background: linear-gradient(90deg, #16a34a 0%, #0d9488 100%);
-  --background-activated: #12813d;
-  --background-hover: linear-gradient(90deg, #1ab055 0%, #0fa89c 100%);
+  --background: var(--np-accent);
+  --background-activated: #0a3a24;
+  --background-hover: var(--np-accent-bright);
   --color: #ffffff;
-  --border-radius: 14px;
-  --box-shadow: var(--np-shadow-glow);
+  --border-radius: 999px;
+  --box-shadow: var(--np-shadow-control);
   font-family: var(--np-font-ui);
-  font-weight: 600;
+  font-weight: 500;
   font-size: 15px;
   text-transform: none;
   letter-spacing: 0.01em;
-  min-height: 52px;
+  min-height: 48px;
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease,
-    filter 0.2s ease;
+    background 0.2s ease;
 }
 
 .btn-primary:not([disabled]):hover {
-  transform: translateY(-2px);
-  --box-shadow: 0 18px 36px rgba(22, 163, 74, 0.45);
-  filter: brightness(1.06);
+  transform: translateY(-1px);
+  --box-shadow: 0 8px 18px rgba(51, 48, 39, 0.14);
 }
 
 .btn-primary:not([disabled]):active {
   transform: translateY(0) scale(0.98);
-  --box-shadow: 0 8px 18px rgba(22, 163, 74, 0.35);
+  --box-shadow: 0 4px 8px rgba(51, 48, 39, 0.1);
 }
 
 .btn-primary:focus-visible {
   outline: none;
   box-shadow:
-    0 0 0 3px rgba(22, 163, 74, 0.35),
-    var(--np-shadow-glow);
+    0 0 0 3px rgba(15, 81, 50, 0.3),
+    var(--np-shadow-control);
 }
 
-/* Estado desativado: mantém o botão sólido e verde.
+/* Estado desativado: superfície rebaixada, sem verde ativo.
    O Ionic aplica :host(.button-disabled){opacity:0.5} no shadow DOM; a
    declaração do documento vence a do shadow tree, então travamos opacity:1
-   e só suavizamos o verde/brilho para sinalizar que está bloqueado. */
+   e usamos fundo neutro para sinalizar que está bloqueado. */
 .btn-primary[disabled],
 .btn-primary.button-disabled {
   opacity: 1;
-  --background: linear-gradient(90deg, #15803d 0%, #0f766e 100%);
-  --background-activated: #14532d;
-  --background-hover: linear-gradient(90deg, #15803d 0%, #0f766e 100%);
-  --color: rgba(255, 255, 255, 0.9);
-  --box-shadow: 0 4px 14px rgba(11, 46, 30, 0.16);
+  --background: var(--np-surface-muted);
+  --background-activated: var(--np-surface-muted);
+  --background-hover: var(--np-surface-muted);
+  --color: var(--np-text-muted);
+  --box-shadow: none;
 }
 
 /* Botões success sólidos sem .btn-primary (ex.: repost-modal) */
 ion-button.button-solid.ion-color-success.button-disabled:not(.btn-primary) {
   opacity: 1;
-  --background: #15803d;
-  --background-activated: #14532d;
-  --background-hover: #15803d;
-  --color: rgba(255, 255, 255, 0.9);
+  --background: var(--np-surface-muted);
+  --background-activated: var(--np-surface-muted);
+  --background-hover: var(--np-surface-muted);
+  --color: var(--np-text-muted);
   --box-shadow: none;
 }
 
@@ -276,8 +290,8 @@ ion-button.button-solid.ion-color-success.button-disabled:not(.btn-primary) {
 
 @media (min-width: 768px) {
   .btn-primary {
-    --border-radius: 14px;
-    min-height: 50px;
+    --border-radius: 999px;
+    min-height: 48px;
     max-width: 400px;
     margin: 0 auto;
     width: 100%;
@@ -331,19 +345,19 @@ ion-button.button-solid.ion-color-success.button-disabled:not(.btn-primary) {
 
 @media (max-width: 359px), (max-height: 549px) {
   .search-shell {
-    border-radius: 12px;
+    border-radius: 999px;
     padding: 1px;
   }
 
   .search-shell ion-searchbar {
-    --border-radius: 10px;
+    --border-radius: 999px;
     font-size: 14px;
   }
 
   .btn-primary {
     min-height: 44px;
     font-size: 14px;
-    --border-radius: 12px;
+    --border-radius: 999px;
   }
 
   .btn-icon {
