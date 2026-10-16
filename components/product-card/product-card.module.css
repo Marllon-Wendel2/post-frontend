@@ -10,8 +10,6 @@
   border: 1px solid var(--np-glass-line);
   border-radius: 20px;
   overflow: hidden;
-  backdrop-filter: blur(var(--np-blur)) saturate(150%);
-  -webkit-backdrop-filter: blur(var(--np-blur)) saturate(150%);
   box-shadow: var(--np-shadow-card);
   cursor: pointer;
   user-select: none;
@@ -25,7 +23,7 @@
 .card:hover {
   transform: translateY(-4px);
   box-shadow: var(--np-shadow-hover);
-  border-color: rgba(255, 255, 255, 0.95);
+  border-color: var(--np-border-hover);
 }
 
 .card:active {
@@ -35,7 +33,7 @@
 .card:focus-visible {
   outline: none;
   box-shadow:
-    0 0 0 3px rgba(22, 163, 74, 0.3),
+    0 0 0 3px rgba(15, 81, 50, 0.3),
     var(--np-shadow-card);
 }
 
@@ -73,7 +71,7 @@
   position: relative;
   aspect-ratio: 4 / 3;
   overflow: hidden;
-  background: #dce9e1;
+  background: #edeae3;
 }
 
 .image {
@@ -102,16 +100,14 @@
   top: 10px;
   left: 10px;
   z-index: 10;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  color: #4b5563;
+  background: var(--np-ivory);
+  color: #6e746c;
   font-size: 10px;
-  font-weight: 600;
+  font-weight: 500;
   padding: 4px 10px;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.9);
-  box-shadow: 0 4px 10px rgba(11, 46, 30, 0.12);
+  border: 1px solid var(--np-border);
+  box-shadow: 0 4px 10px rgba(51, 48, 39, 0.12);
 }
 
 /* Check de seleção */
@@ -125,12 +121,10 @@
   justify-content: center;
   width: 30px;
   height: 30px;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: var(--np-ivory);
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.95);
-  box-shadow: 0 6px 14px rgba(11, 46, 30, 0.16);
+  border: 1px solid var(--np-border);
+  box-shadow: 0 6px 14px rgba(51, 48, 39, 0.16);
 }
 
 .check svg {
@@ -151,14 +145,12 @@
   gap: 6px;
   padding: 9px 12px;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.9);
-  background: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--np-border);
+  background: var(--np-ivory);
   color: var(--np-ink);
   font-family: var(--np-font-ui);
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1;
   cursor: pointer;
   opacity: 0;
@@ -181,14 +173,14 @@
   background: var(--np-accent);
   color: #ffffff;
   border-color: transparent;
-  box-shadow: 0 8px 18px rgba(22, 163, 74, 0.4);
+  box-shadow: 0 8px 18px rgba(51, 48, 39, 0.14);
 }
 
 .add.add-added {
   background: var(--np-accent);
   color: #ffffff;
   border-color: transparent;
-  box-shadow: 0 8px 18px rgba(22, 163, 74, 0.35);
+  box-shadow: 0 6px 16px rgba(51, 48, 39, 0.12);
 }
 
 /* Touch: a seleção já é indicada pelo check, sem ação de hover */
@@ -231,7 +223,7 @@
 .price {
   margin: 0;
   font-family: var(--np-font-display);
-  font-size: 15px;
+  font-size: 17px;
   color: var(--np-accent);
   letter-spacing: 0.01em;
 }
@@ -250,7 +242,7 @@
   }
 
   .price {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .check {
@@ -301,6 +293,6 @@
   }
 
   .price {
-    font-size: 13px;
+    font-size: 14px;
   }
 }

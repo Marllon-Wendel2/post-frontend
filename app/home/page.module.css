@@ -18,11 +18,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #16a34a, #0d9488);
+  background: linear-gradient(135deg, #0f5132, #1a6b45);
   color: #ffffff;
   font-family: var(--np-font-display);
-  font-size: 17px;
-  box-shadow: 0 8px 20px rgba(22, 163, 74, 0.4);
+  font-size: 19px;
+  box-shadow: 0 6px 16px rgba(51, 48, 39, 0.14);
 }
 
 .greeting {
@@ -38,8 +38,10 @@
 }
 
 .greeting-name {
-  font-size: 17px;
-  font-weight: 700;
+  font-family: var(--np-font-display);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.15;
   color: var(--np-ink);
   white-space: nowrap;
   overflow: hidden;
@@ -69,8 +71,10 @@
 
 .section-title {
   margin: 0;
-  font-size: 17px;
-  font-weight: 700;
+  font-family: var(--np-font-display);
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 1.2;
   color: var(--np-ink);
 }
 
@@ -94,7 +98,7 @@
 .empty-icon {
   font-size: 48px;
   margin-bottom: 12px;
-  color: rgba(22, 163, 74, 0.35);
+  color: rgba(15, 81, 50, 0.35);
 }
 
 .empty-state p {
@@ -123,26 +127,25 @@
 }
 
 .fab-button {
-  --background: linear-gradient(90deg, #16a34a 0%, #0d9488 100%);
-  --background-activated: #12813d;
-  --background-hover: linear-gradient(90deg, #1ab055 0%, #0fa89c 100%);
+  --background: var(--np-accent);
+  --background-activated: #0a3a24;
+  --background-hover: var(--np-accent-bright);
   --color: #ffffff;
   --border-radius: 999px;
-  --box-shadow: 0 14px 30px rgba(22, 163, 74, 0.45);
-  font-weight: 600;
+  --box-shadow: 0 12px 28px rgba(51, 48, 39, 0.16);
+  font-weight: 500;
   font-size: 14px;
   height: 48px;
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease,
-    filter 0.2s ease;
+    background 0.2s ease;
   animation: np-rise 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .fab-button:not([disabled]):hover {
-  transform: translateY(-2px);
-  --box-shadow: 0 18px 36px rgba(22, 163, 74, 0.5);
-  filter: brightness(1.06);
+  transform: translateY(-1px);
+  --box-shadow: 0 14px 32px rgba(51, 48, 39, 0.2);
 }
 
 .fab-button:not([disabled]):active {
@@ -207,7 +210,7 @@
   }
 
   .greeting-name {
-    font-size: 19px;
+    font-size: 23px;
   }
 
   .search-row,
@@ -217,7 +220,7 @@
   }
 
   .section-title {
-    font-size: 18px;
+    font-size: 24px;
   }
 
   .product-grid {
@@ -248,7 +251,7 @@
   }
 
   .greeting-name {
-    font-size: 15px;
+    font-size: 17px;
   }
 
   .search-row {
@@ -260,7 +263,7 @@
   }
 
   .section-title {
-    font-size: 15px;
+    font-size: 18px;
   }
 
   .section-count {

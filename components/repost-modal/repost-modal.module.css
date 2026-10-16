@@ -5,7 +5,7 @@
 .item-image {
   width: 56px;
   height: 56px;
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
   flex-shrink: 0;
   margin-right: 12px;
@@ -19,7 +19,7 @@
 
 .item-title {
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 500;
   margin: 0 0 2px 0;
   line-height: 1.3;
 }
@@ -29,7 +29,7 @@
   align-items: center;
   gap: 4px;
   margin-top: 4px;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .price-input {
@@ -37,10 +37,10 @@
   --padding-end: 4px;
   --padding-top: 2px;
   --padding-bottom: 2px;
-  --background: #f3f4f6;
-  --border-radius: 6px;
+  --background: var(--np-surface-muted);
+  --border-radius: 14px;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
   width: 100px;
   min-height: 32px;
 }
@@ -51,8 +51,8 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
-  background: white;
-  border-top: 1px solid #e5e7eb;
+  background: var(--np-ivory);
+  border-top: 1px solid var(--np-border);
 }
 
 .result-container {
@@ -61,10 +61,11 @@
 }
 
 .result-title {
-  font-size: 16px;
-  font-weight: 600;
+  font-family: var(--np-font-display);
+  font-size: 18px;
+  font-weight: 400;
   margin-bottom: 16px;
-  color: #16a34a;
+  color: var(--np-accent);
 }
 
 .result-item {
@@ -83,7 +84,7 @@
 .result-text {
   font-size: 14px;
   font-weight: 500;
-  color: #374151;
+  color: #6e746c;
 }
 
 @keyframes spin {
